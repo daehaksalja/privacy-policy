@@ -6,239 +6,113 @@
   <title>Moong Counter 개인정보처리방침 / Privacy Policy</title>
   <meta name="robots" content="noindex" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="Moong Counter 개인정보처리방침 / Privacy Policy (KO/EN). No sign-up. No ads/tracking SDK. Google Play & RevenueCat for subscription verification only." />
-
   <style>
     :root{
-      /* Light theme */
-      --bg: #ffffff;
-      --fg: #0a1020;
-      --muted: #5b667a;
-      --link: #0b72ff;
-      --link-hover: #0958c7;
-      --border: #d7dde5;
-      --chip: #f6f8fa;
-      --thead: #eef3f9;
-      --zebra: rgba(9,16,32,.035);
-      --card: #ffffff;
-      --shadow: 0 6px 20px rgba(30,43,66,.08);
-
-      /* Brand accents */
-      --brand: #5a8cff;
-      --brand-2: #8ed3ff;
-
-      /* Tabs */
-      --tab-bg: #f4f6fb;
-      --tab-fg: #203054;
-      --tab-active: #0b72ff;
-      --tab-active-bg: #e9f2ff;
-
-      /* Table header text color (avoid “white on white”) */
-      --th-fg: #0a1020;
-
-      /* Focus ring */
-      --focus: 2px solid #6db3ff;
-      --focus-shadow: 0 0 0 4px rgba(109,179,255,.25);
-
-      /* Sticky offset default (updated by JS) */
-      --sticky-offset: 56px;
+      /* Light */
+      --bg:#ffffff; --fg:#0a1020; --muted:#5b667a;
+      --link:#0b72ff; --link-hover:#0958c7;
+      --border:#d7dde5; --chip:#f6f8fa; --thead:#eef3f9;
+      --zebra:rgba(9,16,32,.035); --card:#ffffff;
+      --shadow:0 6px 20px rgba(30,43,66,.08);
+      --tab-bg:#f4f6fb; --tab-fg:#203054;
+      --tab-active:#0b72ff; --tab-active-bg:#e9f2ff;
+      --th-fg:#0a1020;
+      --focus:2px solid #6db3ff; --focus-shadow:0 0 0 4px rgba(109,179,255,.25);
     }
-
     @media (prefers-color-scheme: dark){
       :root{
-        /* Dark theme */
-        --bg: #0b0f14;
-        --fg: #e8eef8;
-        --muted: #a7b2c2;
-        --link: #7ab0ff;
-        --link-hover: #a4caff;
-        --border: #2b3441;
-        --chip: #131922;
-        --thead: #121a24;
-        --zebra: rgba(255,255,255,.04);
-        --card: #0e141c;
-        --shadow: 0 8px 30px rgba(0,0,0,.35);
-
-        --tab-bg: #121a24;
-        --tab-fg: #c7d6ea;
-        --tab-active: #9bcbff;
-        --tab-active-bg: #0f1c2b;
-
-        --th-fg: #e8eef8;
+        /* Dark */
+        --bg:#0b0f14; --fg:#e8eef8; --muted:#a7b2c2;
+        --link:#7ab0ff; --link-hover:#a4caff;
+        --border:#2b3441; --chip:#131922; --thead:#111821;
+        --zebra:rgba(255,255,255,.04); --card:#0e141c;
+        --shadow:0 8px 30px rgba(0,0,0,.35);
+        --tab-bg:#121a24; --tab-fg:#c7d6ea;
+        --tab-active:#9bcbff; --tab-active-bg:#0f1c2b;
+        --th-fg:#e8eef8;
       }
     }
 
-    /* Base */
-    html, body { background: var(--bg); color: var(--fg); }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Apple SD Gothic Neo, Apple Color Emoji, Roboto, Noto Sans KR, Arial, sans-serif;
-      line-height: 1.65;
-    }
+    html,body{background:var(--bg);color:var(--fg)}
+    body{margin:0;line-height:1.65;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Apple SD Gothic Neo,Apple Color Emoji,Roboto,Noto Sans KR,Arial,sans-serif}
 
-    /* Header (soft gradient) */
-    .hero {
-      background: radial-gradient(1200px 600px at 10% 0%, rgba(90,140,255,.25), transparent 60%),
-                  radial-gradient(900px 500px at 90% -10%, rgba(142,211,255,.25), transparent 55%),
-                  linear-gradient(180deg, rgba(90,140,255,.08), transparent 55%);
-      border-bottom: 1px solid var(--border);
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px;
-    }
-    .headline {
-      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-    }
-    h1 {
-      font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem);
-      line-height: 1.28;
-      margin: 0;
-      letter-spacing: .2px;
-    }
-    .badge-en{
-      font-size: .85rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: var(--chip);
-      color: var(--muted);
-    }
-    .meta {
-      margin-top: 6px;
-      color: var(--muted);
-      font-size: .92rem;
-    }
+    /* Hero */
+    .hero{background:
+      radial-gradient(1200px 600px at 10% 0%, rgba(90,140,255,.25), transparent 60%),
+      radial-gradient(900px 500px at 90% -10%, rgba(142,211,255,.20), transparent 55%),
+      linear-gradient(180deg, rgba(90,140,255,.08), transparent 55%);
+      border-bottom:1px solid var(--border)}
+    .container{max-width:900px;margin:0 auto;padding:24px 16px}
+    .headline{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    h1{font-size:clamp(1.4rem,1.1rem + 1.5vw,2rem);line-height:1.28;margin:0}
+    .badge-en{font-size:.85rem;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--chip);color:var(--muted)}
+    .meta{margin-top:6px;color:var(--muted);font-size:.92rem}
 
-    /* Sticky tab bar */
-    .tabs-wrap {
-      position: sticky; top: 0; z-index: 5;
-      /* Fallback background */
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: saturate(160%) blur(6px);
-    }
-    /* Use color-mix if supported */
-    @supports (background: color-mix(in oklab, white 90%, black)) {
-      .tabs-wrap{ background: color-mix(in oklab, var(--bg) 92%, transparent); }
-    }
+    /* Tabs (sticky) */
+    .tabs-wrap{position:sticky;top:0;z-index:5;backdrop-filter:saturate(160%) blur(6px);
+      background:color-mix(in oklab, var(--bg) 92%, transparent);border-bottom:1px solid var(--border)}
+    .tabs{display:flex;gap:8px;padding:10px 0;flex-wrap:wrap}
+    .tabs a{padding:8px 14px;border-radius:12px;border:1px solid var(--border);
+      background:var(--tab-bg);color:var(--tab-fg);text-decoration:none;font-weight:600;
+      transition:transform .08s ease, background .15s ease, border-color .15s ease}
+    .tabs a[aria-current="true"]{color:var(--tab-active);background:var(--tab-active-bg);border-color:var(--tab-active);transform:translateY(-1px)}
+    .tabs a:focus-visible{outline:var(--focus);box-shadow:var(--focus-shadow)}
 
-    .tabs {
-      display: flex; gap: 8px; padding: 10px 0;
-      flex-wrap: wrap;
-    }
-    .tabs [role="tab"] {
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--tab-bg);
-      color: var(--tab-fg);
-      font-weight: 600;
-      transition: transform .08s ease, background .15s ease, border-color .15s ease;
-    }
-    .tabs [role="tab"][aria-selected="true"] {
-      color: var(--tab-active);
-      background: var(--tab-active-bg);
-      border-color: var(--tab-active);
-      transform: translateY(-1px);
-    }
-    .tabs [role="tab"]:focus-visible{
-      outline: var(--focus); box-shadow: var(--focus-shadow);
-    }
+    /* Card */
+    .paper{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:24px;margin:16px auto 32px}
+    .paper h2{font-size:clamp(1.05rem,.9rem + .6vw,1.25rem);margin:1.8rem 0 .8rem;line-height:1.3}
+    .paper p{margin:.75rem 0}
+    .paper small,.paper time{opacity:.85}
 
-    /* Main card */
-    .paper {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-      padding: 24px;
-      margin: 16px auto 32px;
-    }
-    .paper h2 {
-      font-size: clamp(1.05rem, .9rem + .6vw, 1.25rem);
-      margin: 1.8rem 0 .8rem;
-      line-height: 1.3;
-    }
-    .paper p { margin: .75rem 0; }
-    .paper small, .paper time { opacity: .85; }
-
-    /* Chips (TL;DR) */
-    .chipbox{
-      border:1px solid var(--border);
-      background: var(--chip);
-      border-radius: 14px;
-      padding: 14px;
-      margin: 12px 0 18px;
-    }
-    .chipbox strong{ display:block; margin-bottom:6px }
-    .chipbox ul{ margin:.3rem 0 .2rem 1.1rem }
+    /* TL;DR chip */
+    .chipbox{border:1px solid var(--border);background:var(--chip);border-radius:14px;padding:14px;margin:12px 0 18px}
+    .chipbox strong{display:block;margin-bottom:6px}
+    .chipbox ul{margin:.3rem 0 .2rem 1.1rem}
 
     /* Table */
-    .table-wrap{ overflow-x:auto; -webkit-overflow-scrolling: touch; margin:.4rem 0 1.25rem }
-    table{
-      border-collapse: collapse;
-      width: 100%;
-      min-width: 720px;
-      border-radius: 12px;
-      overflow: hidden;
+    .table-wrap{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.5rem 0 1.25rem;border-radius:12px;border:1px solid var(--border)}
+    table{border-collapse:separate;border-spacing:0;width:100%;min-width:760px}
+    colgroup col:nth-child(1){width:18ch}
+    colgroup col:nth-child(2){width:28ch}
+    colgroup col:nth-child(3){width:auto}
+    colgroup col:nth-child(4){width:24ch}
+    th,td{border-top:1px solid var(--border);border-right:1px solid var(--border);padding:12px 13px;text-align:left;vertical-align:top}
+    tr>:first-child{border-left:1px solid var(--border)}
+    thead th{background:var(--thead);color:var(--th-fg);font-weight:700;position:sticky;top:0;z-index:1}
+    tbody tr:nth-child(odd){background:var(--zebra)}
+    tbody td, thead th{word-break:keep-all}
+    /* Better readability for dense cells */
+    td{line-height:1.55}
+    /* Small screens: allow nicer wrapping */
+    @media (max-width:560px){
+      colgroup{display:none}
+      table{min-width:620px}
     }
-    th, td{
-      border: 1px solid var(--border);
-      padding: 11px 12px;
-      text-align: left;
-      vertical-align: top;
-    }
-    thead th{
-      background: var(--thead);
-      color: var(--th-fg);
-      font-weight: 700;
-      position: sticky; top: var(--sticky-offset); /* under sticky tabs */
-      z-index: 1;
-    }
-    tbody tr:nth-child(odd){ background: var(--zebra) }
-    tbody td, thead th { word-break: keep-all }
 
-    /* Language sections (tabs) */
-    .lang{ display: none; }
-    .lang.active{ display: block; }
+    /* Lang sections */
+    .lang{display:none}
+    .lang.active{display:block}
 
     /* Links */
-    a{ color: var(--link) }
-    a:hover{ color: var(--link-hover) }
-    a:focus-visible{ outline: var(--focus); box-shadow: var(--focus-shadow); border-radius: 8px }
+    a{color:var(--link)} a:hover{color:var(--link-hover)}
+    a:focus-visible{outline:var(--focus);box-shadow:var(--focus-shadow);border-radius:8px}
 
     /* Code */
-    code, pre{ background: var(--chip); padding: 2px 6px; border-radius: 6px }
-    pre{ overflow:auto }
+    code,pre{background:var(--chip);padding:2px 6px;border-radius:6px}
+    pre{overflow:auto}
 
-    /* Footer */
-    footer{ margin: 28px 0 40px; color: var(--muted) }
-    .langswitch a{ color: var(--muted); text-decoration: none }
-    .langswitch a:hover{ color: var(--link) }
+    /* Footer & back-to-top */
+    footer{margin:28px 0 40px;color:var(--muted)}
+    .langswitch a{color:var(--muted);text-decoration:none}
+    .langswitch a:hover{color:var(--link)}
+    .top{position:fixed;right:16px;bottom:16px;z-index:10;border-radius:12px;border:1px solid var(--border);
+      background:var(--chip);color:var(--fg);padding:8px 10px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
 
-    /* Back to top */
-    .top {
-      position: fixed; right: 16px; bottom: 16px; z-index: 10;
-      border-radius: 12px; border: 1px solid var(--border);
-      background: var(--chip); color: var(--fg);
-      padding: 8px 10px; text-decoration: none; font-weight: 600;
-      box-shadow: var(--shadow);
-    }
-
-    /* Print: one language (current hash) */
-    @media print {
-      .tabs-wrap, .top, .langswitch, .chipbox { display: none !important; }
-      .paper { border: none; box-shadow: none; padding: 0 }
-      thead th { position: static; }
-    }
-
-    /* Screen-reader only */
-    .sr-only{
-      position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-      clip:rect(0,0,0,0);white-space:nowrap;border:0
+    /* Print */
+    @media print{
+      .tabs-wrap,.top,.langswitch,.chipbox{display:none!important}
+      .paper{border:none;box-shadow:none;padding:0}
+      thead th{position:static}
     }
   </style>
 </head>
@@ -255,12 +129,12 @@
     </div>
   </header>
 
-  <!-- Sticky tabs -->
+  <!-- Tabs -->
   <div class="tabs-wrap">
     <div class="container">
       <nav class="tabs" role="tablist" aria-label="Language">
-        <a id="tab-ko" href="#ko" role="tab" aria-controls="panel-ko" aria-selected="true">한국어</a>
-        <a id="tab-en" href="#en" role="tab" aria-controls="panel-en" aria-selected="false">English</a>
+        <a id="tab-ko" href="#ko" role="tab" aria-controls="panel-ko">한국어</a>
+        <a id="tab-en" href="#en" role="tab" aria-controls="panel-en">English</a>
       </nav>
     </div>
   </div>
@@ -272,31 +146,32 @@
       <ul>
         <li><b>회원가입 없음 / No sign-up</b></li>
         <li><b>광고·추적 SDK 없음 / No ads or tracking SDKs</b></li>
-        <li><b>결제·구독 검증만 처리</b> (Google Play & RevenueCat) / <b>Purchase & subscription verification only</b></li>
-        <li><b>30일 무료체험</b> → 미해지 시 자동갱신 / <b>30-day free trial</b> → auto-renew if not canceled</li>
+        <li><b>결제·구독 검증만 처리</b> (Google Play & RevenueCat)</li>
+        <li><b>30일 무료체험</b> → 미해지 시 자동갱신</li>
       </ul>
     </aside>
 
     <!-- Korean -->
-    <section id="panel-ko" class="paper lang active" role="tabpanel" aria-labelledby="tab-ko" lang="ko">
-      <p><small>시행일: <time datetime="2025-11-09">2025-11-09</time> · 최종개정: <time datetime="2025-11-09">2025-11-09</time></small></p>
-
+    <section id="panel-ko" class="paper lang" lang="ko" aria-label="개인정보처리방침(한국어)">
       <h2 id="collect-ko">1. 수집하는 정보</h2>
       <ul>
         <li>앱은 <strong>회원가입/로그인 기능을 제공하지 않으며</strong> 이름·이메일·전화번호 등 <strong>개인 식별 정보</strong>를 직접 수집하지 않습니다.</li>
         <li>구독 결제 및 검증과 관련하여 다음 정보가 처리될 수 있습니다.
           <ul>
             <li><strong>Google Play 결제</strong>: 구매 토큰, 주문/거래 식별자, 영수증 정보</li>
-            <li><strong>RevenueCat</strong>: 앱/인스턴스 식별자, 구독 상태(활성/만료/기간), 결제 영수증/토큰, 앱/플랫폼 버전 등 검증에 필요한 기술 정보</li>
+            <li><strong>RevenueCat</strong>: 앱/인스턴스 식별자, 구독 상태, 결제 영수증/토큰, 앱/플랫폼 버전 등</li>
           </ul>
         </li>
         <li><strong>광고 식별자·광고 SDK·분석/크래시 SDK</strong>는 사용하지 않습니다.</li>
-        <li><strong>민감정보</strong>(건강·생체 등)는 수집하지 않습니다.</li>
+        <li><strong>민감정보</strong>는 수집하지 않습니다.</li>
       </ul>
 
       <h2 id="table-ko">2. 처리 위탁·제3자 제공(요약 표)</h2>
       <div class="table-wrap">
         <table aria-describedby="table-ko">
+          <colgroup>
+            <col><col><col><col>
+          </colgroup>
           <thead>
             <tr>
               <th scope="col">수탁자/제3자</th>
@@ -310,11 +185,11 @@
               <td>Google Play 결제</td>
               <td>구매 토큰, 주문/거래 식별자, 영수증 정보</td>
               <td>결제 처리·영수증 검증, 구매 복원, 환불 처리, 부정 이용 방지</td>
-              <td>해외(미국 등) / 전자상거래법에 따른 거래기록 <strong>5년</strong> 보관</td>
+              <td>해외(미국 등) / 전자상거래법에 따른 거래기록 <strong>5년</strong></td>
             </tr>
             <tr>
               <td>RevenueCat</td>
-              <td>앱/인스턴스 식별자, 구독 상태, 결제 영수증/토큰, 앱/플랫폼 버전 등</td>
+              <td>앱/인스턴스 식별자, 구독 상태, 결제 영수증/토큰, 앱/플랫폼 버전</td>
               <td>서버 측 구독 관리·검증, 상태 동기화, 사기 방지</td>
               <td>해외(미국 등) / 사업자 정책 및 법령에 따름(목적 달성 후 파기)</td>
             </tr>
@@ -327,127 +202,63 @@
       <ul>
         <li>구독 상태 확인 및 프리미엄 기능 제공</li>
         <li>구매 복원, 환불/청약철회 처리, 부정 이용 방지</li>
-        <li>시스템 안정화 목적의 기술적 처리(개인 식별이 불가능한 범위)</li>
-      </ul>
-
-      <h2 id="legal-bases-ko">3-1. 합법적 처리 근거 (GDPR/UK GDPR)</h2>
-      <ul>
-        <li><strong>계약 이행</strong>: 구독 검증, 프리미엄 제공, 구매 복원</li>
-        <li><strong>법적 의무</strong>: 세무/거래 기록 보관, 환불·청약철회 처리</li>
-        <li><strong>정당한 이익</strong>: 부정 이용 방지, 서비스 보안 유지</li>
-        <li><strong>동의</strong>: (해당 시) 선택 기능에 대한 동의 기반 처리, 언제든 철회 가능</li>
+        <li>시스템 안정화 목적의 기술적 처리(비식별 범위)</li>
       </ul>
 
       <h2 id="overseas-ko">4. 국외 이전</h2>
-      <p>상기 사업자의 서버는 <strong>해외(미국 등)</strong>에 위치할 수 있습니다. 이전 항목·목적·보유기간은 위 표와 같으며, 표준계약조항(SCC) 등 관련 법령에 따라 보호됩니다.</p>
+      <p>상기 사업자의 서버는 <strong>해외(미국 등)</strong>에 위치할 수 있으며, 이전 항목·목적·보유기간은 위 표와 같습니다. 표준계약조항(SCC) 등 관련 법령에 따라 보호됩니다.</p>
 
       <h2 id="retention-ko">5. 보유 및 파기</h2>
       <ul>
-        <li>전자상거래 관련 거래기록(대금결제·재화공급): <strong>5년</strong></li>
+        <li>전자상거래 관련 거래기록: <strong>5년</strong></li>
         <li>소비자 불만·분쟁처리 기록: <strong>3년</strong></li>
-        <li>그 외 목적 달성 시 지체 없이 파기(전자파일은 복구 불가능한 방법으로 영구 삭제)</li>
+        <li>그 외 목적 달성 시 지체 없이 파기</li>
       </ul>
 
       <h2 id="rights-ko">6. 이용자의 권리</h2>
       <ul>
         <li><strong>열람·정정·삭제·처리정지</strong> 요청 가능</li>
-        <li>구독 취소·환불은 Google Play 결제 정책을 따릅니다.</li>
+        <li>구독 취소·환불은 Google Play 정책 준수</li>
         <li>권리 행사: 아래 연락처로 요청 시 법정 기한 내 조치</li>
       </ul>
-      <p>신원 확인을 위해 구매 토큰/주문번호 등 최소 정보가 필요할 수 있습니다. 법정 보관의무로 일부 요청은 제한될 수 있으며, 불복 시 감독기관에 불만을 제기할 수 있습니다.</p>
 
       <h2 id="security-ko">7. 안전성 확보 조치</h2>
       <ul>
-        <li>전송구간 암호화(HTTPS), 최소 수집, 접근통제</li>
+        <li>HTTPS 전송, 최소 수집, 접근통제</li>
         <li>접근기록 보관, 내부 관리계획 수립</li>
       </ul>
 
       <h2 id="permissions-ko">8. 앱 권한 사용 안내</h2>
       <ul>
-        <li><strong>다른 앱 위에 표시(SYSTEM_ALERT_WINDOW)</strong>: 플로팅 카운터 표시(사용자 동의 시)</li>
-        <li><strong>진동(VIBRATE)</strong>: 버튼 햅틱 피드백(선택)</li>
-        <li><strong>알림(POST_NOTIFICATIONS)</strong>: 포그라운드 서비스 상태 표기(마케팅 푸시 없음)</li>
-        <li><strong>포그라운드 서비스(FOREGROUND_SERVICE 등)</strong>: 백그라운드 동작 유지(상시 알림 표시)</li>
-      </ul>
-      <p><small>※ 실제 사용하는 권한만 요청되며, 미부여 시 일부 기능이 제한될 수 있습니다.</small></p>
-
-      <h3 id="audio-note-ko">오디오 관련 안내</h3>
-      <p>앱은 버튼 효과음을 재생하지만 <strong>마이크 녹음은 사용하지 않습니다</strong>. 오디오는 앱 내부 자산 또는 앱이 생성한 파일을 사용하며, 외부 음악 라이브러리에 접근하지 않습니다.</p>
-
-      <h2 id="children-ko">9. 아동의 개인정보</h2>
-      <p>본 서비스는 아동을 대상으로 하지 않습니다(미국: 만 13세 미만, 한국: 만 14세 미만 등 지역 기준 준수). 아동 정보 수집이 확인되면 지체 없이 삭제합니다.</p>
-
-      <h2 id="deletion-ko">10. 데이터 삭제 요청(DSR)</h2>
-      <ul>
-        <li>필요 정보: <strong>주문번호/영수증 식별자</strong> 또는 <strong>구매 토큰</strong></li>
-        <li>요청 유형: 열람/정정/삭제/처리정지</li>
-      </ul>
-      <p>요청 접수 시 RevenueCat 상의 고객/구독 기록은 가능한 범위에서 <strong>익명화 또는 삭제</strong>하며, Google Play 거래기록은 법정 보관기간 경과 후 파기합니다.</p>
-
-      <h2 id="links-ko">11. 외부 링크</h2>
-      <p>타사 사이트/서비스로 연결될 수 있으며, 해당 사업자의 방침이 적용됩니다.</p>
-
-      <h2 id="profiling-ko">12. 자동화된 의사결정</h2>
-      <p>법적/유사하게 중대한 영향을 미치는 <strong>자동화된 의사결정/프로파일링</strong>을 수행하지 않습니다.</p>
-
-      <h2 id="breach-ko">13. 개인정보 유출 통지</h2>
-      <p>침해사고 확인 시 법령에 따라 지체 없이 통지 및 보호조치를 시행합니다.</p>
-
-      <h2 id="contact-ko">14. 연락처</h2>
-      <p>이메일: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a> (제목에 <strong>“권리 요청”</strong> 표기)</p>
-
-      <h2 id="change-ko">15. 방침 변경</h2>
-      <p>법령/서비스 변경 시 문서를 업데이트하며, <strong>중요 변경은 시행 7일 전</strong> 공지합니다.</p>
-
-      <h2 id="pricing-ko">16. 가격 및 청구 안내</h2>
-      <p>월간 자동갱신 구독. 국/환율/플랫폼 정책에 따라 가격 변동 가능. 결제 직전 화면에서 최종 가격 확인.</p>
-      <p><strong>30일 무료체험</strong> 제공 시, 미해지 시 체험 종료 후 자동 과금됩니다.</p>
-
-      <h2 id="trial-ko">17. 무료체험 및 해지</h2>
-      <ul>
-        <li>최초 가입자 대상(계정/결제수단/기기 조합에 따라 재제공 제한 가능)</li>
-        <li>체험 중 해지 가능(체험 종료까지 이용, 과금 없음)</li>
-        <li>해지: Google Play → 계정 → 결제 및 구독 → <strong>구독 관리</strong>
-          (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">바로가기</a>)</li>
-        <li>환불/청약철회 등은 Google Play 정책 준수</li>
+        <li><strong>다른 앱 위에 표시</strong>(SYSTEM_ALERT_WINDOW): 플로팅 카운터</li>
+        <li><strong>진동</strong>(VIBRATE): 햅틱 피드백(선택)</li>
+        <li><strong>알림</strong>(POST_NOTIFICATIONS): 포그라운드 상태 알림(마케팅 푸시 없음)</li>
+        <li><strong>포그라운드 서비스</strong>: 백그라운드 동작 유지(상시 알림 표기)</li>
       </ul>
 
-      <h2 id="regional-ko">18. 지역별 추가 고지</h2>
-      <h3>EU/EEA & 영국</h3>
-      <ul>
-        <li>권리: 접근, 정정, 삭제, 제한, 이동, 자동화된 결정 관련 거부/설명 요구</li>
-        <li>불만 제기: 거주지 감독기관/UK ICO</li>
-        <li>이전: 적정성 결정 또는 SCC 등 적용</li>
-      </ul>
-      <h3>캘리포니아 (CCPA/CPRA)</h3>
-      <ul>
-        <li>판매/공유 없음(교차 맥락 광고 목적)</li>
-        <li>권리: 알 권리, 삭제, 정정, 민감정보 사용 제한</li>
-      </ul>
-      <h3>브라질 (LGPD)·캐나다·호주·싱가포르·일본·튀르키예</h3>
-      <p><small>현지법상 권리/절차를 존중하며, 처리 범위가 결제/구독 기술정보로 제한됨에 유의</small></p>
+      <h2 id="contact-ko">9. 연락처</h2>
+      <p>이메일: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a></p>
     </section>
 
     <!-- English -->
-    <section id="panel-en" class="paper lang" role="tabpanel" aria-labelledby="tab-en" lang="en" hidden>
-      <p><small>Effective: <time datetime="2025-11-09">2025-11-09</time> · Last Updated: <time datetime="2025-11-09">2025-11-09</time></small></p>
-
+    <section id="panel-en" class="paper lang" lang="en" aria-label="Privacy Policy (English)">
       <h2 id="collect-en">1. Data We Collect</h2>
       <ul>
         <li>No sign-up/login; we do not directly collect personal identifiers (name, email, phone).</li>
         <li>For purchase & subscription verification:
           <ul>
             <li><strong>Google Play Billing</strong>: purchase token, order/transaction IDs, receipt info</li>
-            <li><strong>RevenueCat</strong>: app/instance IDs, subscription state, purchase receipts/tokens, app/platform version and related technical info</li>
+            <li><strong>RevenueCat</strong>: app/instance IDs, subscription state, purchase receipts/tokens, app/platform version</li>
           </ul>
         </li>
-        <li><strong>No ad ID, no ad/analytics/crash SDKs</strong>.</li>
+        <li><strong>No ad ID and no ad/analytics/crash SDKs</strong>.</li>
         <li><strong>No sensitive categories</strong> collected.</li>
       </ul>
 
       <h2 id="table-en">2. Processors / Third-Party Disclosures</h2>
       <div class="table-wrap">
         <table aria-describedby="table-en">
+          <colgroup><col><col><col><col></colgroup>
           <thead>
             <tr>
               <th scope="col">Processor / Third Party</th>
@@ -460,14 +271,14 @@
             <tr>
               <td>Google Play Billing</td>
               <td>Purchase token, order/transaction IDs, receipt info</td>
-              <td>Payment processing, receipt verification, restore, refunds, fraud prevention</td>
-              <td>Outside your country (e.g., US) / Transaction records kept <strong>5 years</strong></td>
+              <td>Payment processing & receipt verification, restore, refunds, fraud prevention</td>
+              <td>Outside your country (e.g., US) / <strong>5 years</strong> for transaction records</td>
             </tr>
             <tr>
               <td>RevenueCat</td>
               <td>App/instance IDs, subscription status, purchase receipts/tokens, app/platform version</td>
               <td>Server-side subscription management/verification, state sync, fraud prevention</td>
-              <td>Outside your country (e.g., US) / Per provider policy & law (deleted after purpose)</td>
+              <td>Outside your country (e.g., US) / Deleted after purpose per policy & law</td>
             </tr>
           </tbody>
         </table>
@@ -475,104 +286,13 @@
 
       <h2 id="purpose-en">3. Purposes</h2>
       <ul>
-        <li>Verify subscription and provide premium features</li>
+        <li>Verify subscription & provide premium features</li>
         <li>Restore purchases, handle refunds/cancellations, prevent abuse</li>
         <li>Technical processing for stability (non-identifying basis)</li>
       </ul>
 
-      <h2 id="legal-bases-en">3-1. Legal Bases (GDPR/UK GDPR)</h2>
-      <ul>
-        <li><strong>Contract</strong>: subscription validation, premium access, restore</li>
-        <li><strong>Legal obligation</strong>: tax/transaction record retention, refunds/cooling-off</li>
-        <li><strong>Legitimate interests</strong>: fraud prevention, service security</li>
-        <li><strong>Consent</strong>: where applicable for optional features (withdraw anytime)</li>
-      </ul>
-
-      <h2 id="overseas-en">4. International Transfers</h2>
-      <p>Providers may process data <strong>outside your country</strong> (e.g., US) with safeguards (e.g., SCC) as required by law.</p>
-
-      <h2 id="retention-en">5. Retention & Deletion</h2>
-      <ul>
-        <li>E-commerce transaction records: <strong>5 years</strong></li>
-        <li>Consumer complaints/disputes: <strong>3 years</strong></li>
-        <li>Otherwise deleted without undue delay after purpose is fulfilled</li>
-      </ul>
-
-      <h2 id="rights-en">6. Your Rights</h2>
-      <ul>
-        <li>Request <strong>access, correction, deletion, restriction</strong></li>
-        <li>Cancellation/refunds follow Google Play policies</li>
-        <li>Contact us below; we respond within statutory timeframes</li>
-      </ul>
-      <p>We may request minimal verification info (purchase token/order number). Some requests may be limited by legal retention duties. You may complain to your supervisory authority.</p>
-
-      <h2 id="security-en">7. Security Measures</h2>
-      <ul>
-        <li>Encryption in transit (HTTPS), data minimization, access controls</li>
-        <li>Access logging, internal policies</li>
-      </ul>
-
-      <h2 id="permissions-en">8. App Permissions</h2>
-      <ul>
-        <li><strong>Draw over other apps</strong>: floating counter (user-consented)</li>
-        <li><strong>Vibration</strong>: haptic feedback (optional)</li>
-        <li><strong>Notifications</strong>: foreground status notice (no marketing pushes)</li>
-        <li><strong>Foreground service</strong>: keep running in background (persistent system notification)</li>
-      </ul>
-
-      <h3 id="audio-note-en">Audio Notice</h3>
-      <p>UI sounds only; <strong>no audio recording</strong>. We use in-app assets or app-generated files; we do not access your external music library.</p>
-
-      <h2 id="children-en">9. Children</h2>
-      <p>Not directed to children; we follow local definitions (e.g., under 13/14). If collected inadvertently, we will delete promptly.</p>
-
-      <h2 id="deletion-en">10. Data Subject Requests</h2>
-      <ul>
-        <li><strong>Order/receipt ID</strong> or <strong>purchase token</strong> for your Google Play account</li>
-        <li>Request type (access/correction/deletion/restriction)</li>
-      </ul>
-      <p>We will anonymize/delete your RevenueCat records where possible; Google Play transaction records are deleted after statutory retention.</p>
-
-      <h2 id="links-en">11. External Links</h2>
-      <p>Third-party sites/services are governed by their own privacy policies.</p>
-
-      <h2 id="profiling-en">12. Automated Decisions</h2>
-      <p>No automated decision-making/profiling with legal or similarly significant effects.</p>
-
-      <h2 id="breach-en">13. Breach Notification</h2>
-      <p>We notify and take protective measures as required by law if an incident is confirmed.</p>
-
-      <h2 id="contact-en">14. Contact</h2>
-      <p>Email: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a> (subject: <strong>“Rights Request”</strong>)</p>
-
-      <h2 id="change-en">15. Changes</h2>
-      <p>We update as required; <strong>material changes</strong> announced at least 7 days before effect.</p>
-
-      <h2 id="pricing-en">16. Pricing & Billing</h2>
-      <p>Monthly auto-renewing subscription. Prices may vary by country/exchange/platform policy; final price shown before purchase.</p>
-      <p><strong>30-day free trial</strong> auto-renews unless canceled.</p>
-
-      <h2 id="trial-en">17. Free Trial & Cancellation</h2>
-      <ul>
-        <li>First-time subscribers only (re-eligibility may be limited)</li>
-        <li>Cancel anytime during trial; premium continues until trial end; no charge</li>
-        <li>Cancel: Google Play → Account → Payments & subscriptions → <strong>Manage subscriptions</strong>
-          (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">Open</a>)</li>
-        <li>Refunds/cooling-off follow Google Play policies</li>
-      </ul>
-
-      <h2 id="regional-en">18. Regional Addenda</h2>
-      <h3>EU/EEA & UK</h3>
-      <ul>
-        <li>Rights: access, rectification, erasure, restriction, portability, objection/explanation re automated decisions</li>
-        <li>Complaints: supervisory authority / UK ICO</li>
-        <li>Transfers: adequacy or SCC with safeguards</li>
-      </ul>
-      <h3>California (CCPA/CPRA) & Others</h3>
-      <ul>
-        <li>No sale or “sharing” for cross-context ads</li>
-        <li>Rights include know/access, delete, correct, limit use of sensitive information</li>
-      </ul>
+      <h2 id="contact-en">4. Contact</h2>
+      <p>Email: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a></p>
     </section>
 
     <footer class="langswitch">
@@ -582,74 +302,28 @@
 
   <a href="#" class="top" title="맨 위로 / Back to top">↑ Top</a>
 
-  <!-- JSON-LD (optional but nice) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"PrivacyPolicy",
-    "name":"Moong Counter Privacy Policy",
-    "inLanguage":["ko","en"],
-    "datePublished":"2025-11-09",
-    "dateModified":"2025-11-09",
-    "publisher":{"@type":"Organization","name":"Moongsoon Studio"},
-    "url": ""
-  }
-  </script>
-
   <script>
-    // Dynamic sticky offset based on tabs height
-    function measureStickyOffset(){
-      const tabsWrap = document.querySelector('.tabs-wrap');
-      const h = tabsWrap ? tabsWrap.getBoundingClientRect().height : 56;
-      document.documentElement.style.setProperty('--sticky-offset', `${Math.ceil(h)}px`);
-    }
-
     // Hash-based language switch + initial detection
-    function setActive() {
-      const hash = (location.hash || '').toLowerCase();
-      const ko = document.getElementById('panel-ko');
-      const en = document.getElementById('panel-en');
-      const tko = document.getElementById('tab-ko');
-      const ten = document.getElementById('tab-en');
-      const isKo = hash === '#ko';
-      const isEn = hash === '#en';
-
-      if (!isKo && !isEn) {
-        const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
-        const pick = (/^ko(\-|$)/i.test(nav)) ? '#ko' : '#en';
-        history.replaceState(null, '', pick);
-        return setActive();
+    function setActive(){
+      const hash=(location.hash||'').toLowerCase();
+      const ko=document.getElementById('panel-ko');
+      const en=document.getElementById('panel-en');
+      const tko=document.getElementById('tab-ko');
+      const ten=document.getElementById('tab-en');
+      const isKo=hash==='#ko'; const isEn=hash==='#en';
+      if(!isKo && !isEn){
+        const nav=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
+        const pick=(/^ko(\-|$)/i.test(nav))?'#ko':'#en';
+        history.replaceState(null,'',pick); return setActive();
       }
-      ko.classList.toggle('active', isKo);
-      en.classList.toggle('active', isEn);
-      ko.toggleAttribute('hidden', !isKo);
-      en.toggleAttribute('hidden', !isEn);
-      tko.setAttribute('aria-selected', isKo ? 'true' : 'false'));
-      ten.setAttribute('aria-selected', isEn ? 'true' : 'false'));
-      document.documentElement.setAttribute('lang', isKo ? 'ko' : 'en');
-      measureStickyOffset();
+      ko.classList.toggle('active',isKo);
+      en.classList.toggle('active',isEn);
+      tko.setAttribute('aria-current',isKo?'true':'false');
+      ten.setAttribute('aria-current',isEn?'true':'false');
+      document.documentElement.setAttribute('lang',isKo?'ko':'en');
     }
-
-    // Keyboard nav for tabs (Enter/Space)
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.tabs [role="tab"]').forEach(tab=>{
-        tab.addEventListener('keydown', (e)=>{
-          if(e.key==='Enter' || e.key===' '){
-            e.preventDefault();
-            const href = tab.getAttribute('href') || '#ko';
-            history.pushState(null,'',href);
-            setActive();
-            tab.focus();
-          }
-        });
-      });
-      measureStickyOffset();
-      setActive();
-    });
-
-    window.addEventListener('resize', measureStickyOffset, {passive:true});
-    window.addEventListener('hashchange', setActive, { passive:true });
-    window.addEventListener('beforeprint', setActive);
+    window.addEventListener('hashchange',setActive,{passive:true});
+    setActive();
   </script>
 </body>
 </html>
