@@ -3,36 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Moong Counter 개인정보처리방침</title>
+  <title>Moong Counter 개인정보처리방침 / Privacy Policy</title>
   <meta name="robots" content="noindex">
   <style>
     :root{
       color-scheme:light dark;
-      /* Light theme */
-      --bg:#ffffff;
-      --fg:#0b1220;
-      --muted:#5b667a;
-      --link:#0b72ff;
-      --border:#d7dde5;
-      --thead:#eef3f9;
-      --zebra:rgba(0,0,0,.035);
-      --chip:#f6f8fa;
+      /* Light */
+      --bg:#ffffff; --fg:#0b1220; --muted:#5b667a; --link:#0b72ff;
+      --border:#d7dde5; --thead:#eef3f9; --zebra:rgba(0,0,0,.035); --chip:#f6f8fa;
+      --tab-bg:#f4f6fb; --tab-fg:#203054; --tab-active:#0b72ff; --tab-active-bg:#e9f2ff;
     }
     @media (prefers-color-scheme: dark){
       :root{
-        /* Dark theme */
-        --bg:#0b0f14;
-        --fg:#e8eef8;
-        --muted:#a7b2c2;
-        --link:#7ab0ff;
-        --border:#2b3441;
-        --thead:#131c26;
-        --zebra:rgba(255,255,255,.06);
-        --chip:#12171d;
+        /* Dark */
+        --bg:#0b0f14; --fg:#e8eef8; --muted:#a7b2c2; --link:#7ab0ff;
+        --border:#2b3441; --thead:#131c26; --zebra:rgba(255,255,255,.06); --chip:#12171d;
+        --tab-bg:#121a24; --tab-fg:#c7d6ea; --tab-active:#9bcbff; --tab-active-bg:#0f1c2b;
       }
     }
-
-    /* Base */
     html,body{background:var(--bg); color:var(--fg);}
     body{max-width:880px;margin:40px auto;padding:0 16px;line-height:1.6;
          font-family:system-ui,Segoe UI,Apple SD Gothic Neo,Apple Color Emoji}
@@ -42,164 +30,444 @@
     a{color:var(--link)}
     small,time{opacity:.85}
     ul{margin:0 0 1rem 1.2rem}
-
-    /* Inline code/chips */
     code,pre{background:var(--chip);padding:2px 6px;border-radius:6px}
     pre{overflow:auto}
-
-    /* Responsive table wrapper */
+    /* Tabs */
+    .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+    .tabs a{
+      padding:8px 12px;border-radius:10px;text-decoration:none;border:1px solid var(--border);
+      background:var(--tab-bg);color:var(--tab-fg)
+    }
+    .tabs a[aria-current="true"]{
+      color:var(--tab-active);background:var(--tab-active-bg);border-color:var(--tab-active)
+    }
+    /* Info Chips */
+    .tldr, .notice {
+      border:1px solid var(--border); background:var(--chip); padding:12px 12px; border-radius:12px; margin:12px 0;
+    }
+    .tldr strong{display:block;margin-bottom:6px}
+    /* Table */
     .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.5rem 0 1.25rem}
     table{border-collapse:collapse;width:100%;min-width:720px}
     th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top}
-    thead th{
-      background:var(--thead);
-      color:var(--fg);
-      font-weight:700;
-      position:sticky; top:0; z-index:1; /* 스크롤해도 헤더 고정 */
-    }
+    thead th{background:var(--thead);color:var(--fg);font-weight:700;position:sticky;top:0;z-index:1}
     tbody tr:nth-child(odd){background:var(--zebra)}
     tbody td, thead th{word-break:keep-all}
+    /* Lang sections */
+    .lang{display:none}
+    .lang.active{display:block}
+    nav.langswitch{margin:8px 0 16px}
+    footer{margin:28px 0 16px;opacity:.8}
   </style>
 </head>
 <body>
-<h1>Moong Counter 개인정보처리방침</h1>
-<p>본 방침은 <strong>Moong Counter</strong>(이하 “앱”)이 이용자의 정보를 어떻게 취급하는지 설명합니다.</p>
-<p><small>시행일: <time datetime="2025-11-09">2025-11-09</time> · 최종개정: <time datetime="2025-11-09">2025-11-09</time></small></p>
+  <h1>Moong Counter 개인정보처리방침 / Privacy Policy</h1>
 
-<h2 id="collect">1. 수집하는 정보</h2>
-<ul>
-  <li>앱은 <strong>회원가입/로그인 기능을 제공하지 않으며</strong> 이름·이메일·전화번호 등 <strong>개인 식별 정보</strong>를 직접 수집하지 않습니다.</li>
-  <li>구독 결제 및 검증과 관련하여 다음 정보가 처리될 수 있습니다.
+  <!-- Language Tabs -->
+  <div class="tabs" role="tablist" aria-label="Language">
+    <a id="tab-ko" href="#ko" role="tab" aria-controls="panel-ko">한국어</a>
+    <a id="tab-en" href="#en" role="tab" aria-controls="panel-en">English</a>
+  </div>
+
+  <!-- TL;DR (shown above language content, bilingual short) -->
+  <div class="tldr">
+    <strong>TL;DR</strong>
     <ul>
-      <li><strong>Google Play 결제</strong>: 구매 토큰, 주문/거래 식별자, 영수증 정보</li>
-      <li><strong>RevenueCat</strong>: 앱/인스턴스 식별자(예: App/Instance ID), 구독 상태(활성/만료/기간), 결제 영수증/토큰, 앱/플랫폼 버전 등 결제 검증에 필요한 기술 정보</li>
+      <li><b>회원가입 없음 / No sign-up</b></li>
+      <li><b>광고·추적 SDK 없음 / No ads or tracking SDKs</b></li>
+      <li><b>결제·구독 검증만 처리 / Only purchase & subscription verification via Google Play & RevenueCat</b></li>
+      <li><b>30일 무료체험</b> 후 미해지 시 자동갱신 / <b>30-day free trial</b>, auto-renew if not canceled</li>
     </ul>
-  </li>
-  <li><strong>광고 식별자·광고 SDK·분석/크래시 SDK</strong>는 사용하지 않습니다.</li>
-  <li><strong>민감정보</strong>(건강·생체 등)는 수집하지 않습니다.</li>
-</ul>
+  </div>
 
-<h2 id="table">2. 처리 위탁·제3자 제공(요약 표)</h2>
-<div class="table-wrap">
-<table>
-  <thead>
-    <tr>
-      <th scope="col">수탁자/제3자</th>
-      <th scope="col">수집(처리) 항목</th>
-      <th scope="col">처리 목적</th>
-      <th scope="col">보관 위치/기간</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Google Play 결제</td>
-      <td>구매 토큰, 주문/거래 식별자, 영수증 정보</td>
-      <td>결제 처리·영수증 검증, 구매 복원, 환불 처리, 부정 이용 방지</td>
-      <td>해외(미국 등) / 전자상거래법에 따른 거래기록 <strong>5년</strong> 보관</td>
-    </tr>
-    <tr>
-      <td>RevenueCat</td>
-      <td>앱/인스턴스 식별자, 구독 상태, 결제 영수증/토큰, 앱/플랫폼 버전 등</td>
-      <td>구독 관리·검증(서버), 구매 복원, 상태 동기화, 사기 방지</td>
-      <td>해외(미국 등) / 사업자 정책 및 법령에 따름(목적 달성 후 파기)</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-<p><small>※ 앱은 회원가입을 요구하지 않으며 이름·이메일·전화번호 등 직접 식별 정보를 수집하지 않습니다.</small></p>
+  <!-- Korean -->
+  <section id="panel-ko" class="lang" lang="ko">
+    <p><small>시행일: <time datetime="2025-11-09">2025-11-09</time> · 최종개정: <time datetime="2025-11-09">2025-11-09</time></small></p>
 
-<h2 id="purpose">3. 처리 목적</h2>
-<ul>
-  <li>구독 상태 확인 및 프리미엄 기능 제공</li>
-  <li>구매 복원, 환불/청약철회 처리, 부정 이용 방지</li>
-  <li>시스템 안정화 목적의 기술적 처리(개인 식별이 불가능한 범위)</li>
-</ul>
+    <h2 id="collect-ko">1. 수집하는 정보</h2>
+    <ul>
+      <li>앱은 <strong>회원가입/로그인 기능을 제공하지 않으며</strong> 이름·이메일·전화번호 등 <strong>개인 식별 정보</strong>를 직접 수집하지 않습니다.</li>
+      <li>구독 결제 및 검증과 관련하여 다음 정보가 처리될 수 있습니다.
+        <ul>
+          <li><strong>Google Play 결제</strong>: 구매 토큰, 주문/거래 식별자, 영수증 정보</li>
+          <li><strong>RevenueCat</strong>: 앱/인스턴스 식별자(예: App/Instance ID), 구독 상태(활성/만료/기간), 결제 영수증/토큰, 앱/플랫폼 버전 등 결제 검증에 필요한 기술 정보</li>
+        </ul>
+      </li>
+      <li><strong>광고 식별자·광고 SDK·분석/크래시 SDK</strong>는 사용하지 않습니다.</li>
+      <li><strong>민감정보</strong>(건강·생체 등)는 수집하지 않습니다.</li>
+    </ul>
 
-<h2 id="overseas">4. 국외 이전</h2>
-<p>상기 사업자의 서버는 <strong>해외(미국 등)</strong>에 위치할 수 있습니다. 이전되는 항목·목적·보유기간은 각 조항에 기재한 바와 같으며,
-표준계약조항(SCC) 등 관련 법령에 따라 보호됩니다.</p>
+    <h2 id="table-ko">2. 처리 위탁·제3자 제공(요약 표)</h2>
+    <div class="table-wrap">
+      <table aria-describedby="table-ko">
+        <thead>
+          <tr>
+            <th scope="col">수탁자/제3자</th>
+            <th scope="col">수집(처리) 항목</th>
+            <th scope="col">처리 목적</th>
+            <th scope="col">보관 위치/기간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Play 결제</td>
+            <td>구매 토큰, 주문/거래 식별자, 영수증 정보</td>
+            <td>결제 처리·영수증 검증, 구매 복원, 환불 처리, 부정 이용 방지</td>
+            <td>해외(미국 등) / 전자상거래법에 따른 거래기록 <strong>5년</strong> 보관</td>
+          </tr>
+          <tr>
+            <td>RevenueCat</td>
+            <td>앱/인스턴스 식별자, 구독 상태, 결제 영수증/토큰, 앱/플랫폼 버전 등</td>
+            <td>구독 관리·검증(서버), 구매 복원, 상태 동기화, 사기 방지</td>
+            <td>해외(미국 등) / 사업자 정책 및 법령에 따름(목적 달성 후 파기)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><small>※ 앱은 회원가입을 요구하지 않으며 이름·이메일·전화번호 등 직접 식별 정보를 수집하지 않습니다.</small></p>
 
-<h2 id="retention">5. 보유 및 파기</h2>
-<ul>
-  <li>전자상거래 관련 거래기록(대금결제·재화공급): <strong>5년</strong> 보관</li>
-  <li>소비자 불만·분쟁처리 기록: <strong>3년</strong> 보관</li>
-  <li>그 외 목적 달성 시 지체 없이 파기(전자파일은 복구 불가능한 방법으로 영구 삭제)</li>
-</ul>
+    <h2 id="purpose-ko">3. 처리 목적</h2>
+    <ul>
+      <li>구독 상태 확인 및 프리미엄 기능 제공</li>
+      <li>구매 복원, 환불/청약철회 처리, 부정 이용 방지</li>
+      <li>시스템 안정화 목적의 기술적 처리(개인 식별이 불가능한 범위)</li>
+    </ul>
 
-<h2 id="rights">6. 이용자의 권리</h2>
-<ul>
-  <li>이용자는 자신의 개인정보에 대해 <strong>열람·정정·삭제·처리정지</strong>를 요청할 수 있습니다.</li>
-  <li>구독 취소·환불 등은 Google Play 결제 정책을 따릅니다.</li>
-  <li>권리 행사 및 문의: 아래 연락처로 요청 시 법령이 허용하는 범위에서 지체 없이 조치합니다.</li>
-</ul>
+    <h2 id="legal-bases-ko">3-1. 합법적 처리 근거 (GDPR/UK GDPR)</h2>
+    <ul>
+      <li><strong>계약 이행</strong>: 구독 상태 확인, 프리미엄 기능 제공, 구매 복원</li>
+      <li><strong>법적 의무 준수</strong>: 세무/거래 기록 보관, 환불·청약철회 처리</li>
+      <li><strong>정당한 이익</strong>: 부정 이용/사기 방지, 시스템 보안 유지(이익과 권리의 균형 고려)</li>
+      <li><strong>동의</strong>: (해당 시) 선택 기능에 대한 명시적 동의 기반 처리. 동의는 언제든 철회 가능</li>
+    </ul>
 
-<h2 id="security">7. 안전성 확보 조치</h2>
-<ul>
-  <li>전송구간 암호화(HTTPS), 최소 수집 및 접근통제</li>
-  <li>접근기록 보관, 내부 관리계획 수립</li>
-</ul>
+    <h2 id="overseas-ko">4. 국외 이전</h2>
+    <p>상기 사업자의 서버는 <strong>해외(미국 등)</strong>에 위치할 수 있습니다. 이전되는 항목·목적·보유기간은 각 조항에 기재한 바와 같으며,
+    표준계약조항(SCC) 등 관련 법령에 따라 보호됩니다.</p>
+    <p>국경 간 이전 시 당사는 적정성 결정, 표준계약조항(SCC) 등 적절한 보호조치를 적용하며, 필요 시 추가 보호수단(암호화·접근통제 등)을 병행합니다.</p>
 
-<h2 id="permissions">8. 앱 권한 사용 안내</h2>
-<ul>
-  <li><strong>다른 앱 위에 표시(SYSTEM_ALERT_WINDOW)</strong>: 플로팅 카운터 표시 기능 제공(사용자 동의 시에만 활성화).</li>
-  <li><strong>진동(VIBRATE)</strong>: 버튼 동작 시 햅틱 피드백 제공(선택 기능).</li>
-  <li><strong>알림(POST_NOTIFICATIONS)</strong>: 포그라운드 서비스 실행 중 <em>필수 시스템 알림</em>(상시 표시)을 위해 사용.
-      마케팅/프로모션 푸시는 전송하지 않습니다.</li>
-  <li><strong>포그라운드 서비스(FOREGROUND_SERVICE 등)</strong>: 카운터의 안정적인 동작 유지를 위해 백그라운드에서도 작업을 지속합니다.
-      사용자에게 상시 알림이 표시됩니다.</li>
-</ul>
-<p><small>※ 실제 사용하는 권한만 기기에서 요청되며, 권한 미부여 시 일부 기능(오버레이 표시 등)이 제한될 수 있습니다.</small></p>
+    <h2 id="retention-ko">5. 보유 및 파기</h2>
+    <ul>
+      <li>전자상거래 관련 거래기록(대금결제·재화공급): <strong>5년</strong> 보관</li>
+      <li>소비자 불만·분쟁처리 기록: <strong>3년</strong> 보관</li>
+      <li>그 외 목적 달성 시 지체 없이 파기(전자파일은 복구 불가능한 방법으로 영구 삭제)</li>
+    </ul>
 
-<h3 id="audio-note">오디오 관련 안내</h3>
-<p>앱은 버튼 효과음 등 오디오를 재생하지만, <strong>마이크 녹음 기능은 사용하지 않습니다</strong>.
-오디오는 앱 내부 자산 또는 앱이 생성한 파일을 사용하며,
-사용자의 외부 저장소(음악 라이브러리) 접근이 필요한 기능은 제공하지 않습니다.</p>
+    <h2 id="rights-ko">6. 이용자의 권리</h2>
+    <ul>
+      <li>이용자는 자신의 개인정보에 대해 <strong>열람·정정·삭제·처리정지</strong>를 요청할 수 있습니다.</li>
+      <li>구독 취소·환불 등은 Google Play 결제 정책을 따릅니다.</li>
+      <li>권리 행사 및 문의: 아래 연락처로 요청 시 법령이 허용하는 범위에서 지체 없이 조치합니다.</li>
+    </ul>
+    <p>요청 시 신원 확인을 위해 구매 토큰 또는 주문 번호 등 최소 정보가 필요할 수 있습니다.
+    우리는 법정 기한 내에 답변하며, 일부 요청은 법적 보관의무 때문에 제한될 수 있습니다.
+    불복이 있는 경우, 거주지 감독기관(예: EU 감독기구, 영국 ICO 등)에 불만을 제기할 수 있습니다.</p>
 
-<h2 id="children">9. 아동의 개인정보</h2>
-<p>본 서비스는 <strong>만 14세 미만</strong>을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+    <h2 id="security-ko">7. 안전성 확보 조치</h2>
+    <ul>
+      <li>전송구간 암호화(HTTPS), 최소 수집 및 접근통제</li>
+      <li>접근기록 보관, 내부 관리계획 수립</li>
+    </ul>
 
-<h2 id="deletion">10. 데이터 삭제 요청(DSR)</h2>
-<p>개인정보 삭제를 원하실 경우 아래 정보를 포함하여 이메일로 요청해 주세요. 법령이 허용하는 범위에서 지체 없이 조치합니다.</p>
-<ul>
-  <li>구매 계정의 <strong>주문 번호/구매 영수증 식별자</strong> 또는 <strong>구매 토큰</strong></li>
-  <li>요청 내용(열람/정정/삭제/처리정지)</li>
-</ul>
-<p>요청 접수 시 당사는 <strong>RevenueCat</strong> 상의 고객/구독 기록을 가능한 범위에서 <strong>익명화 또는 삭제</strong>하며,
-법정 보관 의무가 있는 <strong>Google Play 거래기록</strong>은 해당 보관기간 경과 후 파기합니다.</p>
+    <h2 id="permissions-ko">8. 앱 권한 사용 안내</h2>
+    <ul>
+      <li><strong>다른 앱 위에 표시(SYSTEM_ALERT_WINDOW)</strong>: 플로팅 카운터 표시 기능 제공(사용자 동의 시에만 활성화).</li>
+      <li><strong>진동(VIBRATE)</strong>: 버튼 동작 시 햅틱 피드백 제공(선택 기능).</li>
+      <li><strong>알림(POST_NOTIFICATIONS)</strong>: 포그라운드 서비스 실행 중 <em>필수 시스템 알림</em>(상시 표시)을 위해 사용.
+          마케팅/프로모션 푸시는 전송하지 않습니다.</li>
+      <li><strong>포그라운드 서비스(FOREGROUND_SERVICE 등)</strong>: 카운터의 안정적인 동작 유지를 위해 백그라운드에서도 작업을 지속합니다.
+          사용자에게 상시 알림이 표시됩니다.</li>
+    </ul>
+    <p><small>※ 실제 사용하는 권한만 기기에서 요청되며, 권한 미부여 시 일부 기능(오버레이 표시 등)이 제한될 수 있습니다.</small></p>
 
-<h2 id="links">11. 외부 링크</h2>
-<p>앱 내에서 타사 웹사이트·서비스로 연결될 수 있습니다. 연결된 곳의 개인정보처리방침은 해당 사업자가 제공하며, 당사는 통제하지 않습니다.</p>
+    <h3 id="audio-note-ko">오디오 관련 안내</h3>
+    <p>앱은 버튼 효과음 등 오디오를 재생하지만, <strong>마이크 녹음 기능은 사용하지 않습니다</strong>.
+    오디오는 앱 내부 자산 또는 앱이 생성한 파일을 사용하며,
+    사용자의 외부 저장소(음악 라이브러리) 접근이 필요한 기능은 제공하지 않습니다.</p>
 
-<h2 id="profiling">12. 자동화된 의사결정</h2>
-<p>앱은 이용자에게 법적 효과 또는 중대한 영향을 미칠 수 있는 <strong>자동화된 의사결정/프로파일링</strong>을 수행하지 않습니다.</p>
+    <h2 id="children-ko">9. 아동의 개인정보</h2>
+    <p>본 서비스는 아동을 대상으로 하지 않습니다. 미국 등 일부 지역에서는 <strong>만 13세 미만</strong>,
+    대한민국 등 일부 지역에서는 <strong>만 14세 미만</strong>을 아동으로 봅니다.
+    해당 지역 법령에서 더 높은 연령을 요구하는 경우 그 기준을 따릅니다.
+    아동의 개인정보가 수집된 사실을 인지하는 즉시 삭제 조치를 취합니다.</p>
 
-<h2 id="breach">13. 개인정보 유출 통지</h2>
-<p>만약 개인정보 침해사고가 확인되는 경우, 관련 법령에 따라 지체 없이 사실을 알리고 필요한 보호조치를 시행합니다.</p>
+    <h2 id="deletion-ko">10. 데이터 삭제 요청(DSR)</h2>
+    <p>개인정보 삭제를 원하실 경우 아래 정보를 포함하여 이메일로 요청해 주세요. 법령이 허용하는 범위에서 지체 없이 조치합니다.</p>
+    <ul>
+      <li>구매 계정의 <strong>주문 번호/구매 영수증 식별자</strong> 또는 <strong>구매 토큰</strong></li>
+      <li>요청 내용(열람/정정/삭제/처리정지)</li>
+    </ul>
+    <p>요청 접수 시 당사는 <strong>RevenueCat</strong> 상의 고객/구독 기록을 가능한 범위에서 <strong>익명화 또는 삭제</strong>하며,
+    법정 보관 의무가 있는 <strong>Google Play 거래기록</strong>은 해당 보관기간 경과 후 파기합니다.</p>
 
-<h2 id="contact">14. 연락처</h2>
-<p>이메일: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a></p>
+    <h2 id="links-ko">11. 외부 링크</h2>
+    <p>앱 내에서 타사 웹사이트·서비스로 연결될 수 있습니다. 연결된 곳의 개인정보처리방침은 해당 사업자가 제공하며, 당사는 통제하지 않습니다.</p>
 
-<h2 id="change">15. 방침 변경</h2>
-<p>법령 또는 서비스의 변경 시 본 문서를 업데이트하며, <strong>중요 변경은 시행 7일 전</strong> 앱 내 공지/웹페이지에 게시합니다.</p>
+    <h2 id="profiling-ko">12. 자동화된 의사결정</h2>
+    <p>앱은 이용자에게 법적 효과 또는 중대한 영향을 미칠 수 있는 <strong>자동화된 의사결정/프로파일링</strong>을 수행하지 않습니다.</p>
 
-<h2 id="pricing">16. 가격 및 청구 안내(고지)</h2>
-<p>앱은 월간 정기구독 기반으로 프리미엄 기능을 제공합니다. 구독 가격은 국가/환율/플랫폼 정책에 따라 변동될 수 있으며,
-결제 직전 화면에서 최종 가격을 확인할 수 있습니다.</p>
-<p><strong>무료체험(30일)</strong>이 제공되는 경우, 체험 기간 종료 후 별도 해지가 없으면
-등록한 결제수단으로 월 구독료가 자동 청구됩니다.</p>
+    <h2 id="breach-ko">13. 개인정보 유출 통지</h2>
+    <p>만약 개인정보 침해사고가 확인되는 경우, 관련 법령에 따라 지체 없이 사실을 알리고 필요한 보호조치를 시행합니다.</p>
 
-<h2 id="trial">17. 무료체험 및 해지</h2>
-<ul>
-  <li>무료체험은 구독 최초 가입 사용자에게 제공되며, 동일 계정/결제수단/기기 조합에 따라 재제공이 제한될 수 있습니다.</li>
-  <li>체험 기간 중 언제든 해지 가능하며, 해지 시 체험 종료 시점까지 프리미엄 이용 후 과금되지 않습니다.</li>
-  <li>해지 방법: Google Play → 계정 → 결제 및 구독 → <strong>구독 관리</strong>에서 해지할 수 있습니다.
-      (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">구독 관리 바로가기</a>)</li>
-  <li>환불·청약철회 등은 Google Play 결제 정책을 따릅니다.</li>
-</ul>
+    <h2 id="contact-ko">14. 연락처</h2>
+    <p>이메일: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a></p>
+    <p>권리 요청 및 문의: 이메일 제목에 <strong>“권리 요청(Access/Deletion 등)”</strong>을 포함해 보내주세요.</p>
 
-<h2 id="regional">18. 지역별 추가 고지</h2>
-<p><em>EU/EEA(GDPR)</em>: 이용자는 GDPR상 권리(접근, 정정, 삭제, 처리제한, 이동, 이의제기)를 행사할 수 있습니다. 문의는 상기 연락처로 해주세요.</p>
-<p><em>캘리포니아(CCPA)</em>: 당사는 개인 정보를 <strong>판매하거나 교차 컨텍스트 광고 목적으로 공유하지 않습니다</strong>. 권리 요청은 이메일로 가능합니다.</p>
+    <h2 id="change-ko">15. 방침 변경</h2>
+    <p>법령 또는 서비스의 변경 시 본 문서를 업데이트하며, <strong>중요 변경은 시행 7일 전</strong> 앱 내 공지/웹페이지에 게시합니다.</p>
 
+    <h2 id="pricing-ko">16. 가격 및 청구 안내(고지)</h2>
+    <p>앱은 월간 정기구독 기반으로 프리미엄 기능을 제공합니다. 구독 가격은 국가/환율/플랫폼 정책에 따라 변동될 수 있으며,
+    결제 직전 화면에서 최종 가격을 확인할 수 있습니다.</p>
+    <p><strong>무료체험(30일)</strong>이 제공되는 경우, 체험 기간 종료 후 별도 해지가 없으면
+    등록한 결제수단으로 월 구독료가 자동 청구됩니다.</p>
+
+    <h2 id="trial-ko">17. 무료체험 및 해지</h2>
+    <ul>
+      <li>무료체험은 구독 최초 가입 사용자에게 제공되며, 동일 계정/결제수단/기기 조합에 따라 재제공이 제한될 수 있습니다.</li>
+      <li>체험 기간 중 언제든 해지 가능하며, 해지 시 체험 종료 시점까지 프리미엄 이용 후 과금되지 않습니다.</li>
+      <li>해지 방법: Google Play → 계정 → 결제 및 구독 → <strong>구독 관리</strong>에서 해지할 수 있습니다.
+          (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">구독 관리 바로가기</a>)</li>
+      <li>환불·청약철회 등은 Google Play 결제 정책을 따릅니다.</li>
+    </ul>
+
+    <h2 id="regional-ko">18. 지역별 추가 고지 (Regional Addenda)</h2>
+    <h3>EU/EEA 및 영국 (GDPR / UK GDPR)</h3>
+    <ul>
+      <li><strong>권리</strong>: 접근, 정정, 삭제, 처리 제한, 이동권, 자동화된 의사결정에 대한 거부/설명 요구, 이의제기</li>
+      <li><strong>불만 제기</strong>: 거주지/근무지의 감독기관 또는 영국 ICO에 불만 제기 가능</li>
+      <li><strong>국경 간 이전</strong>: 적정성 결정 또는 표준계약조항(SCC) 등 적절한 보호조치 적용</li>
+    </ul>
+    <h3>캘리포니아 (CCPA/CPRA)</h3>
+    <ul>
+      <li><strong>판매/공유</strong>: 당사는 개인 정보를 판매하거나 교차 컨텍스트 광고 목적으로 공유하지 않습니다.</li>
+      <li><strong>권리</strong>: 접근(알 권리), 삭제, 정정, 민감정보 사용 제한 요청 가능</li>
+      <li><strong>대리 요청</strong>: 검증 가능한 소비자 요청 절차에 따라 에이전트를 통한 행사 가능</li>
+    </ul>
+    <h3>브라질 (LGPD)</h3>
+    <ul>
+      <li><strong>권리</strong>: 처리 존재 확인, 데이터 접근, 정정, 익명화/차단/삭제, 이동, 동의 철회, 자동화된 결정 검토 요구 등</li>
+      <li><strong>법적 근거</strong>: 계약 이행, 법적 의무, 정당한 이익 등</li>
+    </ul>
+    <h3>캐나다 (PIPEDA & 퀘벡 관행)</h3>
+    <ul><li><strong>권리</strong>: 접근·정정 요청 가능. 퀘벡 등 일부 지역은 현지어 고지를 선호할 수 있음.</li></ul>
+    <h3>오스트레일리아 (Privacy Act / APPs)</h3>
+    <ul><li><strong>권리</strong>: 접근·정정 요청 가능. 우려 사항은 OAIC에 제기할 수 있음.</li></ul>
+    <h3>싱가포르 (PDPA)</h3>
+    <ul><li><strong>권리</strong>: 목적 통지, 동의 관리, 접근·정정, 보유기간 종료 시 삭제</li></ul>
+    <h3>일본 (APPI)</h3>
+    <ul><li><strong>권리</strong>: 보유개인데이터의 고지·개시·정정·이용정지 등 요구 가능</li></ul>
+    <h3>터키 (KVKK)</h3>
+    <ul><li><strong>권리</strong>: 처리 여부 확인, 정정·삭제·처리정지 요청, 손해배상 청구 등</li></ul>
+    <p><small>※ 위 권리는 각 법령의 적용 요건과 예외에 따르며, 서비스가 수집하는 정보 범위(결제·구독 관리 관련 기술 정보)에 비추어 일부 권리는 사실상 적용 대상이 없을 수 있습니다.</small></p>
+  </section>
+
+  <!-- English -->
+  <section id="panel-en" class="lang" lang="en">
+    <p><small>Effective: <time datetime="2025-11-09">2025-11-09</time> · Last Updated: <time datetime="2025-11-09">2025-11-09</time></small></p>
+
+    <h2 id="collect-en">1. Data We Collect</h2>
+    <ul>
+      <li>The app <strong>does not provide sign-up/login</strong> and does <strong>not</strong> directly collect personal identifiers such as name, email, or phone number.</li>
+      <li>For subscription purchase and verification, the following may be processed:
+        <ul>
+          <li><strong>Google Play Billing</strong>: purchase token, order/transaction IDs, receipt info</li>
+          <li><strong>RevenueCat</strong>: app/instance identifiers (e.g., App/Instance ID), subscription status (active/expired/period), purchase receipts/tokens, app/platform versions and related technical info required for verification</li>
+        </ul>
+      </li>
+      <li><strong>No ad ID, ad SDK, analytics/crash SDKs</strong> are used.</li>
+      <li><strong>No sensitive categories</strong> (health, biometrics, etc.) are collected.</li>
+    </ul>
+
+    <h2 id="table-en">2. Processors / Third-Party Disclosures (Summary)</h2>
+    <div class="table-wrap">
+      <table aria-describedby="table-en">
+        <thead>
+          <tr>
+            <th scope="col">Processor / Third Party</th>
+            <th scope="col">Items Processed</th>
+            <th scope="col">Purpose</th>
+            <th scope="col">Location / Retention</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google Play Billing</td>
+            <td>Purchase token, order/transaction IDs, receipt info</td>
+            <td>Payment processing & receipt verification, restore purchases, refunds, fraud prevention</td>
+            <td>Outside your country (e.g., US) / Transaction records kept <strong>5 years</strong> per e-commerce laws</td>
+          </tr>
+          <tr>
+            <td>RevenueCat</td>
+            <td>App/instance IDs, subscription status, purchase receipts/tokens, app/platform versions</td>
+            <td>Server-side subscription management & verification, state sync, fraud prevention</td>
+            <td>Outside your country (e.g., US) / Per provider policy & law (deleted after purpose achieved)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><small>※ The app does not require sign-up and does not collect direct identifiers such as name/email/phone.</small></p>
+
+    <h2 id="purpose-en">3. Purposes</h2>
+    <ul>
+      <li>Verify subscription status and provide premium features</li>
+      <li>Restore purchases, process refunds/cancellations, prevent abuse</li>
+      <li>Technical processing for stability (on a non-identifying basis)</li>
+    </ul>
+
+    <h2 id="legal-bases-en">3-1. Legal Bases (GDPR/UK GDPR)</h2>
+    <ul>
+      <li><strong>Contract performance</strong>: subscription validation, premium access, restore purchases</li>
+      <li><strong>Legal obligations</strong>: tax/transaction record retention, refunds/cooling-off handling</li>
+      <li><strong>Legitimate interests</strong>: fraud prevention, service security (balanced against your rights)</li>
+      <li><strong>Consent</strong>: where applicable for optional features; can be withdrawn at any time</li>
+    </ul>
+
+    <h2 id="overseas-en">4. International Transfers</h2>
+    <p>Servers of the above providers may be located <strong>outside your country (e.g., the US)</strong>. Items/purposes/retention are as stated above and protected under applicable law including Standard Contractual Clauses (SCC).</p>
+    <p>For cross-border transfers, we apply appropriate safeguards (e.g., adequacy, SCC) and additional measures where needed (encryption, access controls).</p>
+
+    <h2 id="retention-en">5. Retention & Deletion</h2>
+    <ul>
+      <li>E-commerce transaction records (payments/supply): <strong>5 years</strong></li>
+      <li>Consumer complaints/dispute records: <strong>3 years</strong></li>
+      <li>Otherwise deleted without undue delay once the purpose is fulfilled (secure erasure for electronic files)</li>
+    </ul>
+
+    <h2 id="rights-en">6. Your Rights</h2>
+    <ul>
+      <li>You may request <strong>access, correction, deletion, or restriction</strong> of your personal data.</li>
+      <li>Subscription cancellation/refunds follow Google Play policies.</li>
+      <li>Contact us below; we will respond within the statutory timeframe where applicable.</li>
+    </ul>
+    <p>For verification, we may request minimal info (e.g., purchase token or order number).  
+    Some requests may be limited due to legal retention obligations.  
+    You may lodge a complaint with your supervisory authority (e.g., an EU DPA or the UK ICO).</p>
+
+    <h2 id="security-en">7. Security Measures</h2>
+    <ul>
+      <li>Encryption in transit (HTTPS), data minimization, access controls</li>
+      <li>Access logging and internal management policies</li>
+    </ul>
+
+    <h2 id="permissions-en">8. App Permissions</h2>
+    <ul>
+      <li><strong>Draw over other apps (SYSTEM_ALERT_WINDOW)</strong>: show floating counter (enabled only with user consent).</li>
+      <li><strong>Vibration (VIBRATE)</strong>: haptic feedback on button actions (optional).</li>
+      <li><strong>Notifications (POST_NOTIFICATIONS)</strong>: required <em>system-level foreground</em> status notice (no marketing pushes).</li>
+      <li><strong>Foreground service (FOREGROUND_SERVICE, etc.)</strong>: keep counter functioning in background; a persistent system notification is shown.</li>
+    </ul>
+    <p><small>※ Only actually used permissions are requested by the OS. Without certain permissions (e.g., overlay), some features are limited.</small></p>
+
+    <h3 id="audio-note-en">Audio Notice</h3>
+    <p>The app plays UI sounds but <strong>does not record audio</strong>.  
+    Audio uses in-app assets or files generated by the app.  
+    We do not access your external music library.</p>
+
+    <h2 id="children-en">9. Children</h2>
+    <p>This service is not directed to children. In some regions (e.g., US) “children” means <strong>under 13</strong>; in others (e.g., Korea) <strong>under 14</strong>.  
+    If a higher age is required by local law, we follow that. If we learn we collected children’s data, we will delete it promptly.</p>
+
+    <h2 id="deletion-en">10. Data Subject Requests (DSR)</h2>
+    <p>To request deletion, please email us including the following:</p>
+    <ul>
+      <li><strong>Order number/receipt ID</strong> or <strong>purchase token</strong> tied to your Google Play account</li>
+      <li>The request type (access/correction/deletion/restriction)</li>
+    </ul>
+    <p>Upon receipt, we will <strong>anonymize or delete</strong> your RevenueCat customer/subscription records where possible,  
+    while Google Play transaction records subject to statutory retention will be deleted after the mandated period.</p>
+
+    <h2 id="links-en">11. External Links</h2>
+    <p>Links to third-party sites/services may appear. Their privacy policies are provided by those parties; we do not control them.</p>
+
+    <h2 id="profiling-en">12. Automated Decisions</h2>
+    <p>We do not engage in <strong>automated decision-making or profiling</strong> that produces legal or similarly significant effects.</p>
+
+    <h2 id="breach-en">13. Breach Notification</h2>
+    <p>If a personal data incident is confirmed, we will notify and take protective measures as required by law.</p>
+
+    <h2 id="contact-en">14. Contact</h2>
+    <p>Email: <a href="mailto:moongsoonstudio@gmail.com">moongsoonstudio@gmail.com</a></p>
+    <p>For rights requests, include <strong>“Rights Request (Access/Deletion etc.)”</strong> in the subject line.</p>
+
+    <h2 id="change-en">15. Changes to This Policy</h2>
+    <p>We update this document when required by law or our services. <strong>Material changes</strong> will be posted in-app/on this page at least 7 days before they take effect.</p>
+
+    <h2 id="pricing-en">16. Pricing & Billing Notice</h2>
+    <p>Premium features are offered via a monthly auto-renewing subscription. Prices may vary by country/exchange/platform policies; the final price is shown before purchase.</p>
+    <p>If a <strong>30-day free trial</strong> is offered, the subscription renews automatically after the trial unless you cancel.</p>
+
+    <h2 id="trial-en">17. Free Trial & Cancellation</h2>
+    <ul>
+      <li>Free trial is for first-time subscribers; re-eligibility may be limited by account/payment method/device.</li>
+      <li>You may cancel anytime during the trial; premium access continues until trial end and you won’t be charged.</li>
+      <li>How to cancel: Google Play → Account → Payments & subscriptions → <strong>Manage subscriptions</strong>.
+          (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener noreferrer">Open subscriptions</a>)</li>
+      <li>Refunds/cooling-off follow Google Play policies.</li>
+    </ul>
+
+    <h2 id="regional-en">18. Regional Addenda</h2>
+    <h3>EU/EEA & UK (GDPR / UK GDPR)</h3>
+    <ul>
+      <li><strong>Rights</strong>: access, rectification, erasure, restriction, portability, objection/explanation on automated decisions</li>
+      <li><strong>Complaints</strong>: lodge with your supervisory authority or the UK ICO</li>
+      <li><strong>Transfers</strong>: adequacy decisions or SCC with appropriate safeguards</li>
+    </ul>
+    <h3>California (CCPA/CPRA)</h3>
+    <ul>
+      <li><strong>Sale/Sharing</strong>: we do not sell or “share” personal information for cross-context behavioral advertising.</li>
+      <li><strong>Rights</strong>: know/access, delete, correct, limit use of sensitive information</li>
+      <li><strong>Authorized agent</strong>: may act on your behalf subject to verifiable consumer request procedures</li>
+    </ul>
+    <h3>Brazil (LGPD)</h3>
+    <ul>
+      <li><strong>Rights</strong>: confirmation, access, correction, anonymization/blocking/deletion, portability, consent withdrawal, review of automated decisions</li>
+      <li><strong>Legal bases</strong>: contract, legal obligations, legitimate interests, etc.</li>
+    </ul>
+    <h3>Canada (PIPEDA & Québec practice)</h3>
+    <ul><li><strong>Rights</strong>: access/correction; some regions prefer local-language consumer notices.</li></ul>
+    <h3>Australia (Privacy Act / APPs)</h3>
+    <ul><li><strong>Rights</strong>: access/correction; complaints to the OAIC.</li></ul>
+    <h3>Singapore (PDPA)</h3>
+    <ul><li><strong>Rights</strong>: purpose notification, consent management, access/correction, deletion when retention ends.</li></ul>
+    <h3>Japan (APPI)</h3>
+    <ul><li><strong>Rights</strong>: notice/disclosure/correction/suspension of retained personal data.</li></ul>
+    <h3>Türkiye (KVKK)</h3>
+    <ul><li><strong>Rights</strong>: verify processing, request correction/deletion/restriction, claim damages.</li></ul>
+    <p><small>※ Rights depend on the applicable law and scope of data we process (limited to purchase/subscription technical data).</small></p>
+  </section>
+
+  <footer>
+    <nav class="langswitch">
+      <a href="#ko">한국어</a> · <a href="#en">English</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Simple hash-based language switch + initial detection
+    function setActive() {
+      const hash = (location.hash || '').toLowerCase();
+      const ko = document.getElementById('panel-ko');
+      const en = document.getElementById('panel-en');
+      const tko = document.getElementById('tab-ko');
+      const ten = document.getElementById('tab-en');
+      const isKo = hash === '#ko';
+      const isEn = hash === '#en';
+      // default: detect browser language if no hash
+      if (!isKo && !isEn) {
+        const nav = (navigator.languages && navigator.languages[0]) || navigator.language || 'en';
+        const pick = (/^ko(\-|$)/i.test(nav)) ? '#ko' : '#en';
+        history.replaceState(null, '', pick);
+        return setActive();
+      }
+      ko.classList.toggle('active', isKo);
+      en.classList.toggle('active', isEn);
+      tko.setAttribute('aria-current', isKo ? 'true' : 'false');
+      ten.setAttribute('aria-current', isEn ? 'true' : 'false');
+      document.documentElement.setAttribute('lang', isKo ? 'ko' : 'en');
+    }
+    window.addEventListener('hashchange', setActive, { passive:true });
+    setActive();
+  </script>
 </body>
 </html>
