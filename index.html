@@ -50,8 +50,9 @@
     .tabs-wrap{position:sticky;top:0;z-index:5;backdrop-filter:saturate(160%) blur(6px);
       background:color-mix(in oklab, var(--bg) 92%, transparent);border-bottom:1px solid var(--border)}
     .tabs{display:flex;gap:8px;padding:10px 0;flex-wrap:wrap}
-    .tabs a{padding:8px 14px;border-radius:12px;border:1px solid var(--border);
+    .tabs a{padding:6px 10px;border-radius:10px;border:1px solid var(--border);
       background:var(--tab-bg);color:var(--tab-fg);text-decoration:none;font-weight:600;
+      font-size:.84rem;
       transition:transform .08s ease, background .15s ease, border-color .15s ease}
     .tabs a[aria-current="true"]{color:var(--tab-active);background:var(--tab-active-bg);border-color:var(--tab-active);transform:translateY(-1px)}
     .tabs a:focus-visible{outline:var(--focus);box-shadow:var(--focus-shadow)}
@@ -127,6 +128,29 @@
       <nav class="tabs" role="tablist" aria-label="Language">
         <a id="tab-ko" href="#ko" role="tab" aria-controls="panel-ko">한국어</a>
         <a id="tab-en" href="#en" role="tab" aria-controls="panel-en">English</a>
+        <a id="tab-ar" href="#ar" role="tab" aria-controls="panel-ar">العربية</a>
+        <a id="tab-cs" href="#cs" role="tab" aria-controls="panel-cs">Čeština</a>
+        <a id="tab-de" href="#de" role="tab" aria-controls="panel-de">Deutsch</a>
+        <a id="tab-el" href="#el" role="tab" aria-controls="panel-el">Ελληνικά</a>
+        <a id="tab-es" href="#es" role="tab" aria-controls="panel-es">Español</a>
+        <a id="tab-fr" href="#fr" role="tab" aria-controls="panel-fr">Français</a>
+        <a id="tab-hi" href="#hi" role="tab" aria-controls="panel-hi">हिन्दी</a>
+        <a id="tab-hu" href="#hu" role="tab" aria-controls="panel-hu">Magyar</a>
+        <a id="tab-id" href="#id" role="tab" aria-controls="panel-id">Bahasa Indonesia</a>
+        <a id="tab-it" href="#it" role="tab" aria-controls="panel-it">Italiano</a>
+        <a id="tab-ja" href="#ja" role="tab" aria-controls="panel-ja">日本語</a>
+        <a id="tab-pl" href="#pl" role="tab" aria-controls="panel-pl">Polski</a>
+        <a id="tab-pt" href="#pt" role="tab" aria-controls="panel-pt">Português</a>
+        <a id="tab-pt-br" href="#pt-br" role="tab" aria-controls="panel-pt-br">Português (Brasil)</a>
+        <a id="tab-ro" href="#ro" role="tab" aria-controls="panel-ro">Română</a>
+        <a id="tab-ru" href="#ru" role="tab" aria-controls="panel-ru">Русский</a>
+        <a id="tab-th" href="#th" role="tab" aria-controls="panel-th">ไทย</a>
+        <a id="tab-tr" href="#tr" role="tab" aria-controls="panel-tr">Türkçe</a>
+        <a id="tab-uk" href="#uk" role="tab" aria-controls="panel-uk">Українська</a>
+        <a id="tab-vi" href="#vi" role="tab" aria-controls="panel-vi">Tiếng Việt</a>
+        <a id="tab-zh" href="#zh" role="tab" aria-controls="panel-zh">中文</a>
+        <a id="tab-zh-hans" href="#zh-hans" role="tab" aria-controls="panel-zh-hans">中文 (简体)</a>
+        <a id="tab-zh-hant" href="#zh-hant" role="tab" aria-controls="panel-zh-hant">中文 (繁體)</a>
       </nav>
     </div>
   </div>
@@ -337,7 +361,6 @@
         <li><strong>v1.0 (2025-11-09)</strong>: 최초 공개</li>
       </ul>
 
-      <!-- ★ 추가: 환불/청약철회/구독 해지 안내 -->
       <h2 id="refund-ko">20. 환불·청약철회·구독 해지 안내</h2>
       <ul>
         <li><strong>결제/환불 주체</strong>: 모든 결제·환불·구독 관리는 <strong>Google Play</strong> 정책과 절차를 따릅니다.</li>
@@ -536,7 +559,6 @@
         <li><strong>v1.0 (2025-11-09)</strong>: Initial release</li>
       </ul>
 
-      <!-- ★ Added: Refund/Withdrawal/Cancellation guide -->
       <h2 id="refund-en">20. Refunds · Cancellations · Subscription Management</h2>
       <ul>
         <li><strong>Billing/Refunds</strong>: All billing, refunds, and subscription management are handled by <strong>Google Play</strong> policies and flows.</li>
@@ -548,6 +570,581 @@
       </ul>
     </section>
 
+    <!-- =================== Arabic =================== -->
+    <section id="panel-ar" class="paper lang" lang="ar" dir="rtl" aria-label="سياسة الخصوصية (العربية)">
+      <p><small>هذه ترجمة مرجعية لسياسة الخصوصية. عند أي تعارض، تُقدَّم النسخة الكورية والإنجليزية على هذا النص.</small></p>
+
+      <h2>1. البيانات التي يعالجها التطبيق</h2>
+      <ul>
+        <li>التطبيق لا يتطلّب إنشاء حساب أو تسجيل دخول، ولا يجمع اسمك أو بريدك الإلكتروني أو رقم هاتفك.</li>
+        <li>تتم معالجة بيانات الشراء والاشتراك فقط عبر Google Play Billing و RevenueCat (مثل رمز الشراء، رقم الطلب/المعاملة، حالة الاشتراك، ومعرّف مجهول داخل التطبيق لطلب الدعم).</li>
+        <li>لا نستخدم معرّف الإعلانات، ولا حزم SDK للإعلانات أو التتبع أو التحليلات أو الأعطال، ولا نعالج فئات حساسة مثل بيانات الصحة أو القياسات الحيوية.</li>
+      </ul>
+
+      <h2>2. الاشتراك والصلاحيات</h2>
+      <ul>
+        <li>يتم تحصيل رسوم الاشتراك وإدارة التجديد/الإلغاء وفق سياسات <strong>Google Play</strong>. يستخدم Moong Counter رمز الشراء وبيانات RevenueCat فقط للتحقق من حالة الاشتراك وتفعيل الميزات المميزة.</li>
+        <li>الأذونات المستخدمة: الظهور فوق التطبيقات الأخرى لعرض العداد العائم، الاهتزاز لردود الفعل اللمسية، الإشعارات لإظهار خدمة في المقدمة، وخدمة في المقدمة للحفاظ على عمل التطبيق في الخلفية. يتم تشغيل <strong>أصوات واجهة المستخدم فقط</strong>؛ لا يتم تسجيل الصوت من الميكروفون.</li>
+      </ul>
+
+      <h2>3. حقوقك وكيفية التواصل</h2>
+      <ul>
+        <li>يمكنك طلب الوصول إلى بياناتك أو تصحيحها أو حذفها أو تقييد معالجتها عن طريق مراسلتنا عبر البريد الإلكتروني مع رقم الطلب/رمز الشراء أو المعرّف المجهول داخل التطبيق.</li>
+        <li>يمكنك إلغاء الاشتراك أو إدارة فترة التجربة المجانية من خلال: Google Play → الحساب → المدفوعات والاشتراكات → إدارة الاشتراكات.</li>
+        <li>تُطبَّق سياسات استرداد الأموال من Google Play في المقام الأول. هذه الترجمة مخصَّصة لراحتك؛ النسخة الإنجليزية هي المرجع القانوني الرئيسي.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Czech =================== -->
+    <section id="panel-cs" class="paper lang" lang="cs" aria-label="Zásady ochrany osobních údajů (čeština)">
+      <p><small>Toto je nezávazný překlad pro vaše pohodlí. V případě rozporu mají přednost korejská a anglická verze.</small></p>
+
+      <h2>1. Jaká data aplikace zpracovává</h2>
+      <ul>
+        <li>Aplikace nevyžaduje registraci ani přihlášení a neshromažďuje vaše jméno, e-mail ani telefonní číslo.</li>
+        <li>Pro nákup a ověření předplatného se zpracovávají pouze údaje služby Google Play Billing a RevenueCat (např. nákupní token, identifikátor objednávky, stav předplatného, anonymní ID v aplikaci pro podporu).</li>
+        <li>Nepoužíváme reklamní ID ani SDK pro reklamu, sledování, analytiku či chybové reporty a nezpracováváme citlivé kategorie údajů (např. zdravotní nebo biometrické údaje).</li>
+      </ul>
+
+      <h2>2. Předplatné a oprávnění</h2>
+      <ul>
+        <li>Účtování předplatného a jeho zrušení se řídí zásadami <strong>Google Play</strong>. Moong Counter používá údaje z Google Play a RevenueCat pouze k ověření vašeho předplatného a zpřístupnění prémiových funkcí.</li>
+        <li>Aplikace může požadovat právo překrytí nad jinými aplikacemi (plovoucí čítač), vibraci (haptická odezva), oznámení (foreground služba) a foreground službu pro běh na pozadí. Přehrávají se pouze <strong>zvuky rozhraní</strong>, žádné nahrávání mikrofonu.</li>
+      </ul>
+
+      <h2>3. Vaše práva a kontakt</h2>
+      <ul>
+        <li>Můžete nás požádat o přístup, opravu, výmaz nebo omezení zpracování. Uveďte prosím číslo objednávky/token nákupu nebo anonymní ID v aplikaci.</li>
+        <li>Předplatné a zkušební období můžete spravovat v: Google Play → Účet → Platby a předplatná → Správa předplatných.</li>
+        <li>Na vrácení plateb se použijí zásady Google Play. Tento překlad je pouze informativní, právně závazná je anglická verze.</li>
+      </ul>
+    </section>
+
+    <!-- =================== German =================== -->
+    <section id="panel-de" class="paper lang" lang="de" aria-label="Datenschutzerklärung (Deutsch)">
+      <p><small>Dies ist eine Übersetzung zu Ihrer Information. Im Konfliktfall haben die koreanische und die englische Fassung Vorrang.</small></p>
+
+      <h2>1. Welche Daten die App verarbeitet</h2>
+      <ul>
+        <li>Die App erfordert keine Registrierung oder Anmeldung und erfasst keine direkten Identifikatoren wie Name, E-Mail-Adresse oder Telefonnummer.</li>
+        <li>Für Kauf und Verifizierung des Abonnements werden nur Daten aus Google Play Billing und RevenueCat verarbeitet (z.&nbsp;B. Kauf-Token, Bestell-/Transaktions-IDs, Abo-Status, anonyme In-App-ID für Supportzwecke).</li>
+        <li>Wir verwenden keine Werbe-ID, keine Werbe-SDKs, keine Tracking- oder Analytics-SDKs und erfassen keine sensiblen Kategorien wie Gesundheits- oder biometrische Daten.</li>
+      </ul>
+
+      <h2>2. Abonnement und Berechtigungen</h2>
+      <ul>
+        <li>Abrechnung, Verlängerung und Kündigung des Abos erfolgen gemäß den Richtlinien von <strong>Google Play</strong>. Moong Counter nutzt die von Google Play und RevenueCat bereitgestellten Daten ausschließlich zur Abo-Prüfung und Aktivierung von Premium-Funktionen.</li>
+        <li>Die App kann Berechtigungen für „Über anderen Apps einblenden“ (Floating Counter), Vibration (haptisches Feedback), Benachrichtigungen (Foreground-Dienst) und Foreground-Service anfordern. Es werden nur <strong>UI-Sounds</strong> abgespielt; es findet keine Mikrofonaufnahme statt.</li>
+      </ul>
+
+      <h2>3. Ihre Rechte und Kontakt</h2>
+      <ul>
+        <li>Sie können Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung verlangen, indem Sie uns Ihre Bestellnummer/Kauf-Token oder die anonyme In-App-ID per E-Mail mitteilen.</li>
+        <li>Sie können Ihr Abo bzw. die Testphase über Google Play → Konto → Zahlungen & Abos → Abos verwalten steuern.</li>
+        <li>Rückerstattungen richten sich nach den Richtlinien von Google Play. Diese Übersetzung dient nur zur Orientierung; rechtlich maßgeblich ist die englische Version.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Greek =================== -->
+    <section id="panel-el" class="paper lang" lang="el" aria-label="Πολιτική απορρήτου (Ελληνικά)">
+      <p><small>Αυτή είναι μια ανεπίσημη μετάφραση για τη διευκόλυνσή σας. Σε περίπτωση ασυμφωνίας, υπερισχύουν οι κορεατικές και αγγλικές εκδόσεις.</small></p>
+
+      <h2>1. Δεδομένα που επεξεργάζεται η εφαρμογή</h2>
+      <ul>
+        <li>Η εφαρμογή δεν απαιτεί εγγραφή ή σύνδεση και δεν συλλέγει άμεσα αναγνωριστικά, όπως όνομα, e-mail ή αριθμό τηλεφώνου.</li>
+        <li>Για την αγορά και την επαλήθευση της συνδρομής, επεξεργάζονται μόνο δεδομένα μέσω Google Play Billing και RevenueCat (π.χ. token αγοράς, αναγνωριστικό παραγγελίας, κατάσταση συνδρομής, ανώνυμο ID στην εφαρμογή για υποστήριξη).</li>
+        <li>Δεν χρησιμοποιούνται αναγνωριστικό διαφημίσεων, διαφημιστικά SDK, SDK παρακολούθησης/αναλύσεων ή σφάλμα-SDK και δεν επεξεργαζόμαστε ευαίσθητες κατηγορίες (υγεία, βιομετρικά κ.λπ.).</li>
+      </ul>
+
+      <h2>2. Συνδρομή και δικαιώματα πρόσβασης</h2>
+      <ul>
+        <li>Η χρέωση και η διαχείριση της συνδρομής γίνονται σύμφωνα με τις πολιτικές του <strong>Google Play</strong>. Η εφαρμογή Moong Counter χρησιμοποιεί τα δεδομένα αυτά μόνο για επαλήθευση συνδρομής και παροχή premium λειτουργιών.</li>
+        <li>Η εφαρμογή μπορεί να ζητά δικαίωμα εμφάνισης πάνω από άλλες εφαρμογές (αιωρούμενος μετρητής), δόνηση, ειδοποιήσεις (foreground υπηρεσία) και υπηρεσία προσκηνίου. Αναπαράγονται μόνο <strong>ήχοι διεπαφής χρήστη</strong>, χωρίς καταγραφή από το μικρόφωνο.</li>
+      </ul>
+
+      <h2>3. Τα δικαιώματά σας και επικοινωνία</h2>
+      <ul>
+        <li>Μπορείτε να ζητήσετε πρόσβαση, διόρθωση, διαγραφή ή περιορισμό της επεξεργασίας στέλνοντάς μας e-mail με τον αριθμό παραγγελίας/token αγοράς ή το ανώνυμο ID της εφαρμογής.</li>
+        <li>Μπορείτε να διαχειριστείτε τη συνδρομή ή τη δωρεάν δοκιμή μέσω: Google Play → Λογαριασμός → Πληρωμές & συνδρομές → Διαχείριση συνδρομών.</li>
+        <li>Οι επιστροφές χρημάτων διέπονται από τις πολιτικές του Google Play. Η παρούσα μετάφραση είναι μόνο για ενημέρωση· νομικά δεσμευτική είναι η αγγλική έκδοση.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Spanish =================== -->
+    <section id="panel-es" class="paper lang" lang="es" aria-label="Política de privacidad (Español)">
+      <p><small>Esta es una traducción de cortesía. En caso de conflicto, prevalecen las versiones en coreano e inglés.</small></p>
+
+      <h2>1. Datos que trata la aplicación</h2>
+      <ul>
+        <li>La app no requiere registro ni inicio de sesión y <strong>no</strong> recopila identificadores directos como nombre, correo electrónico o número de teléfono.</li>
+        <li>Para comprar y verificar la suscripción se tratan únicamente datos de Google Play Billing y RevenueCat (por ejemplo, token de compra, ID de pedido/transacción, estado de la suscripción, ID anónima en la app para soporte).</li>
+        <li>No utilizamos ID de publicidad ni SDK de anuncios, seguimiento, analíticas o errores, ni tratamos categorías sensibles como datos de salud o biométricos.</li>
+      </ul>
+
+      <h2>2. Suscripción y permisos</h2>
+      <ul>
+        <li>La facturación, renovación y cancelación de la suscripción se gestionan conforme a las políticas de <strong>Google Play</strong>. Moong Counter usa estos datos sólo para verificar la suscripción y habilitar funciones premium.</li>
+        <li>La app puede solicitar permisos para mostrarse sobre otras apps (contador flotante), vibración (respuesta háptica), notificaciones (servicio en primer plano) y servicio en primer plano para seguir funcionando en segundo plano. Sólo se reproducen <strong>sonidos de interfaz</strong>; no se graba audio del micrófono.</li>
+      </ul>
+
+      <h2>3. Tus derechos y contacto</h2>
+      <ul>
+        <li>Puedes solicitar acceso, rectificación, eliminación o limitación del tratamiento enviándonos tu número de pedido/token de compra o la ID anónima de la app por correo electrónico.</li>
+        <li>La gestión de la suscripción y el periodo de prueba se realiza en: Google Play → Cuenta → Pagos y suscripciones → Gestionar suscripciones.</li>
+        <li>Los reembolsos se rigen por las políticas de Google Play. Esta traducción es sólo informativa; la versión jurídicamente vinculante es la inglesa.</li>
+      </ul>
+    </section>
+
+    <!-- =================== French =================== -->
+    <section id="panel-fr" class="paper lang" lang="fr" aria-label="Politique de confidentialité (Français)">
+      <p><small>Il s’agit d’une traduction fournie pour votre confort. En cas de divergence, les versions coréenne et anglaise prévalent.</small></p>
+
+      <h2>1. Données traitées par l’application</h2>
+      <ul>
+        <li>L’application ne nécessite ni inscription ni connexion et ne collecte pas d’identifiants directs tels que votre nom, votre e-mail ou votre numéro de téléphone.</li>
+        <li>Pour l’achat et la vérification de l’abonnement, seules les données de Google Play Billing et de RevenueCat sont traitées (token d’achat, ID de commande/transaction, statut d’abonnement, ID anonyme dans l’application pour l’assistance).</li>
+        <li>Aucun ID publicitaire, aucun SDK de publicité, de traçage, d’analytique ou de crash n’est utilisé, et aucune catégorie de données sensibles (santé, biométrie…) n’est traitée.</li>
+      </ul>
+
+      <h2>2. Abonnement et autorisations</h2>
+      <ul>
+        <li>La facturation, le renouvellement et l’annulation de l’abonnement sont gérés selon les règles de <strong>Google Play</strong>. Moong Counter utilise ces données uniquement pour vérifier votre abonnement et activer les fonctions premium.</li>
+        <li>L’application peut demander les autorisations suivantes : affichage au-dessus des autres apps (compteur flottant), vibration (retour haptique), notifications (service au premier plan) et service au premier plan pour fonctionner en arrière-plan. Seuls des <strong>sons d’interface</strong> sont joués, sans enregistrement du microphone.</li>
+      </ul>
+
+      <h2>3. Vos droits et contact</h2>
+      <ul>
+        <li>Vous pouvez demander l’accès, la rectification, l’effacement ou la limitation du traitement en nous écrivant avec votre numéro de commande/token d’achat ou l’ID anonyme affichée dans l’app.</li>
+        <li>Vous pouvez gérer votre abonnement et l’essai gratuit via : Google Play → Compte → Paiements et abonnements → Gérer les abonnements.</li>
+        <li>Les remboursements sont soumis aux politiques de Google Play. Cette traduction est informative ; la version anglaise reste la référence juridique.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Hindi =================== -->
+    <section id="panel-hi" class="paper lang" lang="hi" aria-label="गोपनीयता नीति (हिन्दी)">
+      <p><small>यह अनुवाद केवल सुविधा के लिए है। किसी भी असंगति की स्थिति में कोरियन और अंग्रेज़ी संस्करण को प्राथमिकता दी जाएगी।</small></p>
+
+      <h2>1. ऐप कौन-सा डेटा प्रोसेस करती है</h2>
+      <ul>
+        <li>इस ऐप में साइन-अप या लॉग-इन की आवश्यकता नहीं है और आपका नाम, ई-मेल या फ़ोन नंबर जैसी प्रत्यक्ष पहचान जानकारी एकत्र नहीं की जाती।</li>
+        <li>सिर्फ़ सब्सक्रिप्शन की खरीद और वेरिफ़िकेशन के लिए Google Play Billing और RevenueCat से संबंधित डेटा (जैसे खरीद टोकन, ऑर्डर/ट्रांज़ैक्शन ID, सब्सक्रिप्शन स्टेटस, सपोर्ट के लिए एक इन-ऐप गुमनाम ID) प्रोसेस किया जाता है।</li>
+        <li>हम विज्ञापन ID, ऐड/ट्रैकिंग/एनालिटिक्स/क्रैश SDK का उपयोग नहीं करते और स्वास्थ्य या बायोमेट्रिक जैसे संवेदनशील डेटा की श्रेणियाँ प्रोसेस नहीं करते।</li>
+      </ul>
+
+      <h2>2. सब्सक्रिप्शन और अनुमतियाँ</h2>
+      <ul>
+        <li>सब्सक्रिप्शन की बिलिंग, नवीनीकरण और रद्दीकरण <strong>Google Play</strong> की नीतियों के अनुसार होता है। Moong Counter इन डेटा का उपयोग केवल प्रीमियम फीचर सक्षम करने और सब्सक्रिप्शन की वैधता जाँचने के लिए करता है।</li>
+        <li>ऐप अन्य ऐप्स के ऊपर दिखने (फ़्लोटिंग काउंटर), वाइब्रेशन, नोटिफ़िकेशन (फ़ोरग्राउंड सर्विस) और बैकग्राउंड में चलाने के लिए फ़ोरग्राउंड सर्विस की अनुमति माँग सकती है। केवल <strong>UI साउंड</strong> चलाए जाते हैं; माइक्रोफ़ोन से कोई ऑडियो रिकॉर्डिंग नहीं होती।</li>
+      </ul>
+
+      <h2>3. आपके अधिकार और संपर्क</h2>
+      <ul>
+        <li>आप हमें ऑर्डर नंबर/परचेज टोकन या इन-ऐप गुमनाम ID के साथ ई-मेल करके डेटा एक्सेस, सुधार, हटाने या प्रोसेसिंग सीमित करने का अनुरोध कर सकते हैं।</li>
+        <li>ट्रायल और सब्सक्रिप्शन को मैनेज करने के लिए: Google Play → Account → Payments & subscriptions → Manage subscriptions।</li>
+        <li>रिफंड Google Play की नीति के अनुसार होते हैं। यह अनुवाद केवल जानकारी के लिए है; क़ानूनी रूप से बाध्यकारी संस्करण अंग्रेज़ी है।</li>
+      </ul>
+    </section>
+
+    <!-- =================== Hungarian =================== -->
+    <section id="panel-hu" class="paper lang" lang="hu" aria-label="Adatkezelési tájékoztató (Magyar)">
+      <p><small>Ez a fordítás a tájékoztatást szolgálja. Eltérés esetén a koreai és angol változat az irányadó.</small></p>
+
+      <h2>1. Milyen adatokat kezel az alkalmazás</h2>
+      <ul>
+        <li>Az alkalmazás nem igényel regisztrációt vagy bejelentkezést, és nem gyűjt olyan közvetlen azonosítókat, mint a név, e-mail cím vagy telefonszám.</li>
+        <li>Előfizetés vásárlásához és ellenőrzéséhez kizárólag a Google Play Billing és a RevenueCat adatai kerülnek feldolgozásra (pl. vásárlási token, rendelés/ügylet azonosítója, előfizetés állapota, névtelen alkalmazáson belüli azonosító támogatáshoz).</li>
+        <li>Nem használunk hirdetési azonosítót, reklám- vagy követő SDK-kat, analitikát vagy crash SDK-t, és nem dolgozunk fel érzékeny adatokat (pl. egészségügyi vagy biometrikus).</li>
+      </ul>
+
+      <h2>2. Előfizetés és jogosultságok</h2>
+      <ul>
+        <li>Az előfizetés számlázását, megújítását és lemondását a <strong>Google Play</strong> szabályai szerint kezelik. A Moong Counter ezeket az adatokat csak az előfizetés érvényességének ellenőrzésére és a prémium funkciók aktiválására használja.</li>
+        <li>Az alkalmazás kérhet jogosultságot más alkalmazások fölötti megjelenítésre (lebegő számláló), rezgésre, értesítésekre (foreground szolgáltatás) és foreground szolgáltatásra a háttérben futás érdekében. Csak <strong>felhasználói felület hangok</strong> szólnak, mikrofon-felvétel nincs.</li>
+      </ul>
+
+      <h2>3. Jogai és kapcsolatfelvétel</h2>
+      <ul>
+        <li>Jogosult hozzáférést, helyesbítést, törlést vagy az adatkezelés korlátozását kérni, ha e-mailben elküldi rendelési számát/vásárlási tokenjét vagy az alkalmazásban megjelenő névtelen azonosítót.</li>
+        <li>Az előfizetés és a próbaidőszak kezelése: Google Play → Fiók → Fizetések és előfizetések → Előfizetések kezelése.</li>
+        <li>Visszatérítésekre a Google Play szabályai vonatkoznak. Jelen fordítás tájékoztató jellegű; a jogilag kötelező változat az angol.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Indonesian =================== -->
+    <section id="panel-id" class="paper lang" lang="id" aria-label="Kebijakan Privasi (Bahasa Indonesia)">
+      <p><small>Ini adalah terjemahan untuk kemudahan Anda. Jika terdapat perbedaan, versi Korea dan Inggris yang berlaku.</small></p>
+
+      <h2>1. Data yang diproses aplikasi</h2>
+      <ul>
+        <li>Aplikasi tidak memerlukan pendaftaran atau login, dan <strong>tidak</strong> mengumpulkan pengenal langsung seperti nama, email, atau nomor telepon Anda.</li>
+        <li>Untuk pembelian dan verifikasi langganan, hanya data dari Google Play Billing dan RevenueCat yang diproses (misalnya token pembelian, ID pesanan/transaksi, status langganan, ID anonim di dalam aplikasi untuk dukungan).</li>
+        <li>Kami tidak menggunakan ID iklan, SDK iklan, pelacakan, analitik, atau crash, dan tidak memproses kategori data sensitif seperti data kesehatan atau biometrik.</li>
+      </ul>
+
+      <h2>2. Langganan dan izin</h2>
+      <ul>
+        <li>Penagihan, perpanjangan, dan pembatalan langganan mengikuti kebijakan <strong>Google Play</strong>. Moong Counter menggunakan data tersebut hanya untuk memverifikasi status langganan dan mengaktifkan fitur premium.</li>
+        <li>Aplikasi dapat meminta izin untuk tampil di atas aplikasi lain (floating counter), getar (umpan balik haptik), notifikasi (layanan latar depan), dan layanan latar depan agar tetap aktif di latar belakang. Hanya <strong>suara antarmuka</strong> yang diputar; tidak ada perekaman audio dari mikrofon.</li>
+      </ul>
+
+      <h2>3. Hak Anda dan kontak</h2>
+      <ul>
+        <li>Anda dapat meminta akses, perbaikan, penghapusan, atau pembatasan pemrosesan dengan mengirim email beserta nomor pesanan/token pembelian atau ID anonim di dalam aplikasi.</li>
+        <li>Kelola langganan dan uji coba melalui: Google Play → Akun → Pembayaran & langganan → Kelola langganan.</li>
+        <li>Pengembalian dana mengikuti kebijakan Google Play. Terjemahan ini hanya sebagai referensi; versi bahasa Inggris yang mengikat secara hukum.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Italian =================== -->
+    <section id="panel-it" class="paper lang" lang="it" aria-label="Informativa sulla privacy (Italiano)">
+      <p><small>Questa è una traduzione di cortesia. In caso di discrepanze, fanno fede le versioni coreana e inglese.</small></p>
+
+      <h2>1. Dati trattati dall’app</h2>
+      <ul>
+        <li>L’app non richiede registrazione o accesso e <strong>non</strong> raccoglie identificatori diretti come nome, e-mail o numero di telefono.</li>
+        <li>Per l’acquisto e la verifica dell’abbonamento vengono trattati solo i dati di Google Play Billing e RevenueCat (token di acquisto, ID ordine/transazione, stato dell’abbonamento, ID anonimo in-app per l’assistenza).</li>
+        <li>Non utilizziamo ID pubblicitario, SDK pubblicitari, di tracciamento, analitica o crash, né trattiamo categorie di dati sensibili (salute, dati biometrici, ecc.).</li>
+      </ul>
+
+      <h2>2. Abbonamento e autorizzazioni</h2>
+      <ul>
+        <li>La fatturazione, il rinnovo e l’annullamento dell’abbonamento sono gestiti secondo le politiche di <strong>Google Play</strong>. Moong Counter usa questi dati solo per verificare l’abbonamento e abilitare le funzionalità premium.</li>
+        <li>L’app può richiedere l’autorizzazione a mostrarsi sopra altre app (contatore flottante), utilizzare la vibrazione, inviare notifiche (servizio in foreground) e mantenere un servizio in foreground per l’esecuzione in background. Vengono riprodotti solo <strong>suoni dell’interfaccia</strong>; non viene registrato audio dal microfono.</li>
+      </ul>
+
+      <h2>3. Diritti e contatti</h2>
+      <ul>
+        <li>Puoi richiedere accesso, rettifica, cancellazione o limitazione del trattamento scrivendoci e indicando il numero d’ordine/token di acquisto o l’ID anonimo visualizzato nell’app.</li>
+        <li>Puoi gestire abbonamento e prova gratuita tramite: Google Play → Account → Pagamenti e abbonamenti → Gestisci abbonamenti.</li>
+        <li>I rimborsi seguono le politiche di Google Play. Questa traduzione è solo informativa; la versione legalmente vincolante è quella inglese.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Japanese =================== -->
+    <section id="panel-ja" class="paper lang" lang="ja" aria-label="プライバシーポリシー（日本語）">
+      <p><small>これは参考のための日本語訳です。不一致がある場合は、韓国語版および英語版の内容が優先されます。</small></p>
+
+      <h2>1. アプリが取り扱うデータ</h2>
+      <ul>
+        <li>本アプリはアカウント登録やログインを必要とせず、氏名・メールアドレス・電話番号などの直接的な識別情報は収集しません。</li>
+        <li>有料版の購入およびサブスクリプションの確認のために、Google Play Billing と RevenueCat のデータ（購入トークン、注文/取引 ID、サブスクリプション状態、サポート用のアプリ内匿名 ID）のみを処理します。</li>
+        <li>広告 ID や広告/トラッキング/分析/クラッシュ用 SDK は利用せず、健康情報や生体情報などのセンシティブなカテゴリも扱いません。</li>
+      </ul>
+
+      <h2>2. サブスクリプションと権限</h2>
+      <ul>
+        <li>課金・更新・解約は <strong>Google Play</strong> のポリシーに従って処理されます。Moong Counter はこれらの情報を、プレミアム機能の有効化とサブスクリプション状態の確認のためにのみ使用します。</li>
+        <li>本アプリは、他のアプリ上への表示（フローティングカウンター）、バイブレーション（ハプティックフィードバック）、通知（フォアグラウンドサービス）、バックグラウンド動作維持のためのフォアグラウンドサービスなどの権限を利用する場合があります。再生するのは <strong>UI 効果音のみ</strong>で、マイクによる録音は行いません。</li>
+      </ul>
+
+      <h2>3. 利用者の権利と連絡先</h2>
+      <ul>
+        <li>注文番号/購入トークンまたはアプリ内の匿名 ID を添えてメールでご連絡いただくことで、データへのアクセス・訂正・削除・処理制限を依頼できます。</li>
+        <li>サブスクリプションおよび無料トライアルの管理は、Google Play → アカウント → お支払いとサブスクリプション → サブスクリプションの管理 から行えます。</li>
+        <li>払戻しは Google Play のポリシーに基づいて行われます。本翻訳は便宜上のものであり、法的に有効なのは英語版です。</li>
+      </ul>
+    </section>
+
+    <!-- =================== Polish =================== -->
+    <section id="panel-pl" class="paper lang" lang="pl" aria-label="Polityka prywatności (Polski)">
+      <p><small>To jest tłumaczenie pomocnicze. W razie rozbieżności obowiązują wersje koreańska i angielska.</small></p>
+
+      <h2>1. Jakie dane przetwarza aplikacja</h2>
+      <ul>
+        <li>Aplikacja nie wymaga rejestracji ani logowania i <strong>nie</strong> zbiera bezpośrednich identyfikatorów, takich jak imię i nazwisko, e-mail czy numer telefonu.</li>
+        <li>Na potrzeby zakupu i weryfikacji subskrypcji przetwarzane są wyłącznie dane z Google Play Billing i RevenueCat (token zakupu, ID zamówienia/transakcji, status subskrypcji, anonimowy identyfikator w aplikacji na potrzeby wsparcia).</li>
+        <li>Nie używamy identyfikatora reklamowego ani SDK do reklam, śledzenia, analityki czy raportowania błędów, ani nie przetwarzamy danych wrażliwych (np. zdrowotnych, biometrycznych).</li>
+      </ul>
+
+      <h2>2. Subskrypcja i uprawnienia</h2>
+      <ul>
+        <li>Rozliczanie, odnawianie i anulowanie subskrypcji odbywa się zgodnie z zasadami <strong>Google Play</strong>. Moong Counter używa tych danych wyłącznie do weryfikacji subskrypcji i aktywacji funkcji premium.</li>
+        <li>Aplikacja może wymagać uprawnień do wyświetlania nad innymi aplikacjami (pływający licznik), wibracji, powiadomień (usługa pierwszoplanowa) oraz usługi pierwszoplanowej w celu działania w tle. Odtwarzane są jedynie <strong>dźwięki interfejsu</strong>; mikrofon nie jest nagrywany.</li>
+      </ul>
+
+      <h2>3. Twoje prawa i kontakt</h2>
+      <ul>
+        <li>Możesz zwrócić się o dostęp, sprostowanie, usunięcie lub ograniczenie przetwarzania, wysyłając do nas numer zamówienia/token zakupu lub anonimowy identyfikator z aplikacji.</li>
+        <li>Subskrypcję i okres próbny możesz zarządzać w: Google Play → Konto → Płatności i subskrypcje → Zarządzaj subskrypcjami.</li>
+        <li>Zwroty środków podlegają zasadom Google Play. Niniejsze tłumaczenie ma charakter informacyjny; prawnie wiążąca jest wersja angielska.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Portuguese (PT) =================== -->
+    <section id="panel-pt" class="paper lang" lang="pt" aria-label="Política de privacidade (Português)">
+      <p><small>Esta é uma tradução para sua conveniência. Em caso de divergência, prevalecem as versões em coreano e inglês.</small></p>
+
+      <h2>1. Dados tratados pela aplicação</h2>
+      <ul>
+        <li>A app não exige registo ou início de sessão e <strong>não</strong> recolhe identificadores diretos como nome, e-mail ou número de telefone.</li>
+        <li>Para a compra e verificação da subscrição, apenas são tratados dados do Google Play Billing e do RevenueCat (token de compra, ID de encomenda/transação, estado da subscrição, ID anónima na app para suporte).</li>
+        <li>Não utilizamos ID de publicidade, nem SDK de anúncios, rastreio, análises ou crash, nem tratamos categorias sensíveis de dados (como saúde ou dados biométricos).</li>
+      </ul>
+
+      <h2>2. Subscrição e permissões</h2>
+      <ul>
+        <li>A faturação, renovação e cancelamento da subscrição seguem as políticas do <strong>Google Play</strong>. O Moong Counter utiliza estes dados apenas para verificar a subscrição e ativar funcionalidades premium.</li>
+        <li>A app pode solicitar permissões para aparecer sobre outras apps (contador flutuante), vibração, notificações (serviço em primeiro plano) e serviço em primeiro plano para se manter ativa em segundo plano. Apenas <strong>sons da interface</strong> são reproduzidos; não há gravação de áudio do microfone.</li>
+      </ul>
+
+      <h2>3. Os seus direitos e contacto</h2>
+      <ul>
+        <li>Pode solicitar acesso, retificação, eliminação ou limitação do tratamento enviando-nos o número da encomenda/token de compra ou a ID anónima mostrada na app.</li>
+        <li>A gestão da subscrição e do período de avaliação faz-se em: Google Play → Conta → Pagamentos e subscrições → Gerir subscrições.</li>
+        <li>Os reembolsos são regidos pelas políticas do Google Play. Esta tradução é apenas informativa; a versão juridicamente vinculativa é a inglesa.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Portuguese (BR) =================== -->
+    <section id="panel-pt-br" class="paper lang" lang="pt-BR" aria-label="Política de privacidade (Português - Brasil)">
+      <p><small>Esta é uma tradução de conveniência. Em caso de conflito, valem as versões em coreano e inglês.</small></p>
+
+      <h2>1. Dados tratados pelo aplicativo</h2>
+      <ul>
+        <li>O app não exige cadastro ou login e <strong>não</strong> coleta identificadores diretos como nome, e-mail ou número de telefone.</li>
+        <li>Para compra e verificação da assinatura, apenas são processados dados do Google Play Billing e do RevenueCat (token de compra, ID de pedido/transação, status da assinatura, ID anônima no app para suporte).</li>
+        <li>Não usamos ID de anúncios nem SDKs de anúncios, rastreamento, analytics ou crash, e não tratamos categorias sensíveis, como dados de saúde ou biométricos.</li>
+      </ul>
+
+      <h2>2. Assinatura e permissões</h2>
+      <ul>
+        <li>A cobrança, renovação e cancelamento da assinatura seguem as políticas do <strong>Google Play</strong>. O Moong Counter utiliza esses dados apenas para verificar sua assinatura e liberar recursos premium.</li>
+        <li>O app pode solicitar permissões para aparecer sobre outros apps (contador flutuante), vibração (feedback tátil), notificações (serviço em primeiro plano) e serviço em primeiro plano para manter-se ativo em segundo plano. Apenas <strong>sons de interface</strong> são reproduzidos; não há gravação de áudio pelo microfone.</li>
+      </ul>
+
+      <h2>3. Seus direitos e contato</h2>
+      <ul>
+        <li>Você pode solicitar acesso, correção, exclusão ou restrição do tratamento enviando um e-mail com o número do pedido/token de compra ou a ID anônima exibida no app.</li>
+        <li>Gerencie sua assinatura e período de teste em: Google Play → Conta → Pagamentos e assinaturas → Gerenciar assinaturas.</li>
+        <li>Reembolsos são regidos pelas políticas do Google Play. Esta tradução é apenas informativa; a versão legalmente vinculante é a inglesa.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Romanian =================== -->
+    <section id="panel-ro" class="paper lang" lang="ro" aria-label="Politica de confidențialitate (Română)">
+      <p><small>Aceasta este o traducere pentru confortul dvs. În caz de neconcordanțe, versiunile în coreeană și engleză au prioritate.</small></p>
+
+      <h2>1. Datele prelucrate de aplicație</h2>
+      <ul>
+        <li>Aplicația nu necesită înregistrare sau autentificare și <strong>nu</strong> colectează identificatori direcți precum nume, e-mail sau număr de telefon.</li>
+        <li>Pentru achiziția și verificarea abonamentului sunt prelucrate doar date din Google Play Billing și RevenueCat (token de cumpărare, ID comandă/tranzacție, stare abonament, ID anonim în aplicație pentru suport).</li>
+        <li>Nu folosim ID de publicitate, SDK-uri de reclame, tracking, analytics sau crash și nu prelucrăm categorii sensibile de date (de exemplu, sănătate sau date biometrice).</li>
+      </ul>
+
+      <h2>2. Abonament și permisiuni</h2>
+      <ul>
+        <li>Facturarea, reînnoirea și anularea abonamentului sunt gestionate conform politicilor <strong>Google Play</strong>. Moong Counter folosește aceste date doar pentru verificarea abonamentului și activarea funcțiilor premium.</li>
+        <li>Aplicația poate solicita permisiuni pentru afișare peste alte aplicații (contor plutitor), vibrații, notificări (serviciu de prim-plan) și serviciu de prim-plan pentru funcționare în fundal. Se redau doar <strong>sunete de interfață</strong>; nu se înregistrează audio de la microfon.</li>
+      </ul>
+
+      <h2>3. Drepturile dvs. și contact</h2>
+      <ul>
+        <li>Puteți solicita acces, rectificare, ștergere sau limitarea prelucrării, trimițându-ne numărul comenzii/token-ul de cumpărare sau ID-ul anonim din aplicație.</li>
+        <li>Gestionarea abonamentului și a perioadei de probă se face din: Google Play → Cont → Plăți și abonamente → Gestionați abonamentele.</li>
+        <li>Rambursările sunt guvernate de politicile Google Play. Această traducere este doar informativă; versiunea cu valoare juridică este cea în limba engleză.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Russian =================== -->
+    <section id="panel-ru" class="paper lang" lang="ru" aria-label="Политика конфиденциальности (Русский)">
+      <p><small>Это перевод для вашего удобства. В случае расхождений приоритет имеют корейская и английская версии.</small></p>
+
+      <h2>1. Какие данные обрабатывает приложение</h2>
+      <ul>
+        <li>Приложение не требует регистрации или входа в аккаунт и <strong>не</strong> собирает прямые идентификаторы, такие как имя, адрес электронной почты или номер телефона.</li>
+        <li>Для покупки и проверки подписки обрабатываются только данные из Google Play Billing и RevenueCat (токен покупки, ID заказа/транзакции, статус подписки, анонимный ID в приложении для поддержки).</li>
+        <li>Мы не используем рекламный идентификатор, SDK для рекламы, трекинга, аналитики или отчетов о сбоях и не обрабатываем чувствительные категории данных (например, медицинские или биометрические).</li>
+      </ul>
+
+      <h2>2. Подписка и разрешения</h2>
+      <ul>
+        <li>Оплата, продление и отмена подписки осуществляются в соответствии с правилами <strong>Google Play</strong>. Moong Counter использует эти данные только для проверки подписки и включения премиум-функций.</li>
+        <li>Приложение может запрашивать разрешения: отображение поверх других приложений (плавающий счётчик), вибрация, уведомления (foreground-служба) и foreground-служба для работы в фоне. Воспроизводятся только <strong>звуки интерфейса</strong>; запись звука с микрофона не ведётся.</li>
+      </ul>
+
+      <h2>3. Ваши права и контакт</h2>
+      <ul>
+        <li>Вы можете запросить доступ, исправление, удаление или ограничение обработки, отправив нам номер заказа/токен покупки или анонимный ID из приложения по электронной почте.</li>
+        <li>Управлять подпиской и пробным периодом можно через: Google Play → Аккаунт → Платежи и подписки → Управление подписками.</li>
+        <li>Возвраты средств регулируются политиками Google Play. Данный перевод носит информационный характер; юридически обязательной является английская версия.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Thai =================== -->
+    <section id="panel-th" class="paper lang" lang="th" aria-label="นโยบายความเป็นส่วนตัว (ภาษาไทย)">
+      <p><small>นี่เป็นคำแปลเพื่อความสะดวกของคุณ หากมีความขัดแย้งให้ยึดเวอร์ชันภาษาเกาหลีและภาษาอังกฤษเป็นหลัก</small></p>
+
+      <h2>1. ข้อมูลที่แอปประมวลผล</h2>
+      <ul>
+        <li>แอปนี้ไม่ต้องการการสมัครบัญชีหรือลงชื่อเข้าใช้ และ<strong>ไม่</strong>เก็บข้อมูลระบุตัวตนโดยตรง เช่น ชื่อ อีเมล หรือหมายเลขโทรศัพท์ของคุณ</li>
+        <li>สำหรับการซื้อและตรวจสอบสถานะการสมัครใช้ เราจะประมวลผลเฉพาะข้อมูลจาก Google Play Billing และ RevenueCat (เช่น โทเค็นการสั่งซื้อ หมายเลขคำสั่งซื้อ/ธุรกรรม สถานะการสมัครใช้ และรหัสนิรนามในแอปเพื่อใช้ในการซัพพอร์ต)</li>
+        <li>เราไม่ใช้ ID โฆษณา หรือ SDK สำหรับโฆษณา การติดตาม การวิเคราะห์ หรือรายงานแครช และไม่ประมวลผลข้อมูลประเภทอ่อนไหว เช่น ข้อมูลสุขภาพหรือข้อมูลชีวมิติ</li>
+      </ul>
+
+      <h2>2. การสมัครใช้บริการและสิทธิ์การเข้าถึง</h2>
+      <ul>
+        <li>การเรียกเก็บเงิน การต่ออายุ และการยกเลิกการสมัครใช้บริการ จะเป็นไปตามนโยบายของ <strong>Google Play</strong> แอป Moong Counter ใช้ข้อมูลดังกล่าวเพื่อยืนยันการสมัครใช้และเปิดใช้ฟีเจอร์พรีเมียมเท่านั้น</li>
+        <li>แอปอาจขอสิทธิ์ในการแสดงผลทับแอปอื่น (ตัวนับแบบลอย), การสั่น (การตอบสนองแบบสัมผัส), การแจ้งเตือน (foreground service) และ foreground service เพื่อให้ทำงานเบื้องหลังได้ จะมีเพียง<strong>เสียง UI</strong> เท่านั้นที่ถูกเล่น ไม่มีการบันทึกเสียงจากไมโครโฟน</li>
+      </ul>
+
+      <h2>3. สิทธิของคุณและการติดต่อ</h2>
+      <ul>
+        <li>คุณสามารถขอเข้าถึง แก้ไข ลบ หรือจำกัดการประมวลผลข้อมูลได้ โดยส่งอีเมลถึงเราพร้อมหมายเลขคำสั่งซื้อ/โทเค็นการซื้อ หรือรหัสนิรนามภายในแอป</li>
+        <li>คุณสามารถจัดการการสมัครใช้และช่วงทดลองใช้ฟรีได้ที่: Google Play → บัญชี → การชำระเงินและการสมัครใช้ → จัดการการสมัครใช้</li>
+        <li>การขอคืนเงินเป็นไปตามนโยบายของ Google Play คำแปลนี้มีไว้เพื่อให้ข้อมูลเท่านั้น; เวอร์ชันที่มีผลผูกพันทางกฎหมายคือภาษาอังกฤษ</li>
+      </ul>
+    </section>
+
+    <!-- =================== Turkish =================== -->
+    <section id="panel-tr" class="paper lang" lang="tr" aria-label="Gizlilik Politikası (Türkçe)">
+      <p><small>Bu metin bilgilendirme amaçlı bir çeviridir. Çelişki olması hâlinde Korece ve İngilizce sürümler geçerlidir.</small></p>
+
+      <h2>1. Uygulamanın işlediği veriler</h2>
+      <ul>
+        <li>Uygulama kayıt veya oturum açma gerektirmez ve adınız, e-posta adresiniz, telefon numaranız gibi doğrudan tanımlayıcıları <strong>toplamaz</strong>.</li>
+        <li>Aboneliğin satın alınması ve doğrulanması için yalnızca Google Play Billing ve RevenueCat verileri işlenir (satın alma jetonu, sipariş/işlem ID’si, abonelik durumu, destek için uygulama içi anonim ID gibi).</li>
+        <li>Reklam kimliği, reklam/izleme/analitik/crash SDK’ları kullanılmaz ve sağlık veya biyometrik veriler gibi hassas veri kategorileri işlenmez.</li>
+      </ul>
+
+      <h2>2. Abonelik ve izinler</h2>
+      <ul>
+        <li>Aboneliğin faturalandırılması, yenilenmesi ve iptali <strong>Google Play</strong> politikalarına göre yürütülür. Moong Counter bu verileri yalnızca aboneliği doğrulamak ve premium özellikleri açmak için kullanır.</li>
+        <li>Uygulama diğer uygulamaların üzerinde gösterim (yüzen sayaç), titreşim, bildirimler (ön plan servisi) ve arka planda çalışmak için ön plan servisi izinleri isteyebilir. Yalnızca <strong>arayüz sesleri</strong> çalınır; mikrofondan ses kaydı yapılmaz.</li>
+      </ul>
+
+      <h2>3. Haklarınız ve iletişim</h2>
+      <ul>
+        <li>Sipariş numaranız/satın alma jetonunuz veya uygulama içi anonim ID’niz ile bize e-posta göndererek verilere erişim, düzeltme, silme veya işlemenin kısıtlanmasını talep edebilirsiniz.</li>
+        <li>Aboneliği ve deneme süresini şu adresten yönetebilirsiniz: Google Play → Hesap → Ödemeler ve abonelikler → Abonelikleri yönet.</li>
+        <li>Geri ödemeler Google Play politikalarına tabidir. Bu çeviri bilgilendirme amaçlıdır; hukuken bağlayıcı olan İngilizce sürümdür.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Ukrainian =================== -->
+    <section id="panel-uk" class="paper lang" lang="uk" aria-label="Політика конфіденційності (Українська)">
+      <p><small>Це переклад для зручності користувачів. У разі розбіжностей перевага надається корейській та англійській версіям.</small></p>
+
+      <h2>1. Дані, які обробляє застосунок</h2>
+      <ul>
+        <li>Застосунок не вимагає реєстрації чи входу в обліковий запис і <strong>не</strong> збирає прямі ідентифікатори, такі як ім’я, e-mail або номер телефону.</li>
+        <li>Для покупки та перевірки підписки обробляються лише дані Google Play Billing та RevenueCat (токен покупки, ID замовлення/транзакції, статус підписки, анонімний ID у застосунку для підтримки).</li>
+        <li>Ми не використовуємо рекламний ID, SDK для реклами, відстеження, аналітики чи звітів про збої та не обробляємо чутливі категорії даних (наприклад, медичні або біометричні).</li>
+      </ul>
+
+      <h2>2. Підписка та дозволи</h2>
+      <ul>
+        <li>Платежі, поновлення та скасування підписки здійснюються згідно з політиками <strong>Google Play</strong>. Moong Counter використовує ці дані лише для перевірки підписки та активації преміум-функцій.</li>
+        <li>Застосунок може запитувати дозволи на відображення поверх інших застосунків (плаваючий лічильник), вібрацію, сповіщення (служба переднього плану) та роботу служби переднього плану для фонової роботи. Відтворюються лише <strong>звуки інтерфейсу</strong>; запис із мікрофона не здійснюється.</li>
+      </ul>
+
+      <h2>3. Ваші права та зв’язок із нами</h2>
+      <ul>
+        <li>Ви можете запросити доступ, виправлення, видалення або обмеження обробки, надіславши нам номер замовлення/токен покупки або анонімний ID із застосунку електронною поштою.</li>
+        <li>Керувати підпискою та пробним періодом можна через: Google Play → Обліковий запис → Платежі та підписки → Керування підписками.</li>
+        <li>Повернення коштів регулюються політиками Google Play. Цей переклад є інформаційним; юридично обов’язковою є англомовна версія.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Vietnamese =================== -->
+    <section id="panel-vi" class="paper lang" lang="vi" aria-label="Chính sách quyền riêng tư (Tiếng Việt)">
+      <p><small>Đây là bản dịch để bạn tham khảo. Nếu có khác biệt, phiên bản tiếng Hàn và tiếng Anh sẽ được ưu tiên.</small></p>
+
+      <h2>1. Dữ liệu ứng dụng xử lý</h2>
+      <ul>
+        <li>Ứng dụng không yêu cầu đăng ký hoặc đăng nhập và <strong>không</strong> thu thập các thông tin định danh trực tiếp như tên, email hay số điện thoại.</li>
+        <li>Chỉ dữ liệu từ Google Play Billing và RevenueCat được xử lý cho việc mua và xác minh gói đăng ký (token mua hàng, ID đơn hàng/giao dịch, trạng thái đăng ký, ID ẩn danh trong ứng dụng để hỗ trợ).</li>
+        <li>Chúng tôi không sử dụng ID quảng cáo, SDK quảng cáo, theo dõi, phân tích hay crash, và không xử lý các loại dữ liệu nhạy cảm như dữ liệu sức khỏe hoặc sinh trắc học.</li>
+      </ul>
+
+      <h2>2. Đăng ký và quyền truy cập</h2>
+      <ul>
+        <li>Việc thanh toán, gia hạn và huỷ đăng ký tuân theo chính sách của <strong>Google Play</strong>. Moong Counter chỉ dùng dữ liệu này để xác minh đăng ký và kích hoạt tính năng cao cấp.</li>
+        <li>Ứng dụng có thể yêu cầu quyền hiển thị trên các ứng dụng khác (bộ đếm nổi), rung, thông báo (dịch vụ nền trước) và dịch vụ nền trước để tiếp tục chạy ở chế độ nền. Chỉ <strong>âm thanh giao diện</strong> được phát; ứng dụng không ghi âm từ micro.</li>
+      </ul>
+
+      <h2>3. Quyền của bạn và liên hệ</h2>
+      <ul>
+        <li>Bạn có thể yêu cầu truy cập, chỉnh sửa, xoá hoặc giới hạn xử lý dữ liệu bằng cách gửi email kèm số đơn hàng/token mua hoặc ID ẩn danh trong ứng dụng.</li>
+        <li>Quản lý đăng ký và thời gian dùng thử: Google Play → Tài khoản → Thanh toán & gói đăng ký → Quản lý gói đăng ký.</li>
+        <li>Việc hoàn tiền tuân theo chính sách của Google Play. Bản dịch này chỉ nhằm mục đích thông tin; phiên bản tiếng Anh mới có giá trị pháp lý.</li>
+      </ul>
+    </section>
+
+    <!-- =================== Chinese (generic) =================== -->
+    <section id="panel-zh" class="paper lang" lang="zh" aria-label="隐私政策（中文）">
+      <p><small>本页为隐私政策的中文便利翻译。如与韩文或英文版本存在不一致，以韩文和英文版本为准。</small></p>
+
+      <h2>1. 应用处理的数据</h2>
+      <ul>
+        <li>本应用无需注册或登录，<strong>不会</strong>收集您的姓名、邮箱、电话号码等直接识别信息。</li>
+        <li>仅为购买和验证订阅，会通过 Google Play Billing 和 RevenueCat 处理数据（例如购买令牌、订单/交易 ID、订阅状态、用于客服的应用内匿名 ID）。</li>
+        <li>不使用广告 ID，也不集成广告、跟踪、分析或崩溃报告 SDK，不处理健康、生物识别等敏感类别数据。</li>
+      </ul>
+
+      <h2>2. 订阅与权限</h2>
+      <ul>
+        <li>订阅的扣费、续订和取消均遵循 <strong>Google Play</strong> 的相关政策。Moong Counter 仅使用这些数据来验证订阅并开启高级功能。</li>
+        <li>应用可能会请求在其他应用上层显示（浮动计数器）、震动、通知（前台服务）以及前台服务以保持后台运行。仅播放<strong>界面音效</strong>，不会录制麦克风音频。</li>
+      </ul>
+
+      <h2>3. 您的权利与联系方式</h2>
+      <ul>
+        <li>您可通过电子邮件联系我们，附上订单号/购买令牌或应用内匿名 ID，以请求访问、更正、删除或限制处理您的数据。</li>
+        <li>订阅和试用期管理路径：Google Play → 帐号 → 付款和订阅 → 管理订阅。</li>
+        <li>退款遵循 Google Play 政策。本翻译仅供参考，具法律约束力的是英文版本。</li>
+      </ul>
+    </section>
+
+    <!-- =================== Chinese (Simplified) =================== -->
+    <section id="panel-zh-hans" class="paper lang" lang="zh-Hans" aria-label="隐私政策（简体中文）">
+      <p><small>本页为隐私政策的简体中文翻译版本。如与韩文或英文版本不一致，以韩文和英文版本为准。</small></p>
+
+      <h2>1. 应用处理的数据</h2>
+      <ul>
+        <li>本应用无需注册或登录，<strong>不会</strong>收集您的姓名、电子邮箱、电话号码等直接识别信息。</li>
+        <li>仅在购买和验证订阅时，通过 Google Play Billing 和 RevenueCat 处理相关数据（例如购买令牌、订单/交易 ID、订阅状态、用于客服的应用内匿名 ID）。</li>
+        <li>不使用广告 ID，不集成广告、跟踪、分析或崩溃报告 SDK，也不处理健康、生物识别等敏感数据类别。</li>
+      </ul>
+
+      <h2>2. 订阅和权限</h2>
+      <ul>
+        <li>订阅的计费、续费和取消均依据 <strong>Google Play</strong> 的政策执行。Moong Counter 仅将这些数据用于验证订阅并启用高级功能。</li>
+        <li>应用可能会请求在其他应用上层显示（悬浮计数器）、振动（触觉反馈）、通知（前台服务）以及前台服务以保持后台运行。应用只播放<strong>界面音效</strong>，不会从麦克风录音。</li>
+      </ul>
+
+      <h2>3. 您的权利与联系方式</h2>
+      <ul>
+        <li>您可以通过电子邮件联系我们，并提供订单号/购买令牌或应用内匿名 ID，以请求访问、更正、删除或限制处理您的数据。</li>
+        <li>要管理订阅和免费试用，请前往：Google Play → 帐号 → 付款和订阅 → 管理订阅。</li>
+        <li>退款事宜以 Google Play 的相关政策为准。本翻译仅供参考；具有法律效力的是英文版本。</li>
+      </ul>
+    </section>
+
+    <!-- =================== Chinese (Traditional) =================== -->
+    <section id="panel-zh-hant" class="paper lang" lang="zh-Hant" aria-label="隱私權政策（繁體中文）">
+      <p><small>本頁為隱私權政策的繁體中文翻譯版本。如與韓文或英文版本內容不一致時，以韓文及英文版本為準。</small></p>
+
+      <h2>1. 應用程式處理的資料</h2>
+      <ul>
+        <li>本應用程式不需要註冊或登入，<strong>不會</strong>蒐集您的姓名、電子郵件、電話號碼等可直接識別您身分的資訊。</li>
+        <li>僅在購買與驗證訂閱時，會透過 Google Play Billing 與 RevenueCat 處理相關資料（例如購買憑證 token、訂單/交易編號、訂閱狀態、用於客服的應用程式內匿名 ID）。</li>
+        <li>不使用廣告 ID，不整合廣告、追蹤、分析或當機回報 SDK，也不會處理健康、生物特徵等敏感資料類別。</li>
+      </ul>
+
+      <h2>2. 訂閱與權限</h2>
+      <ul>
+        <li>訂閱的收費、自動續訂與取消均依照 <strong>Google Play</strong> 的相關政策執行。Moong Counter 僅將這些資料用於驗證訂閱並啟用進階功能。</li>
+        <li>應用程式可能會請求在其他應用程式上方顯示（浮動計數器）、震動（觸覺回饋）、通知（前景服務）以及前景服務以維持背景執行。僅會播放<strong>介面音效</strong>，不會透過麥克風錄音。</li>
+      </ul>
+
+      <h2>3. 您的權利與聯絡方式</h2>
+      <ul>
+        <li>您可透過電子郵件聯絡我們，並提供訂單編號/購買 token 或應用程式內顯示的匿名 ID，以請求存取、更正、刪除或限制處理您的資料。</li>
+        <li>若要管理訂閱與免費試用，可前往：Google Play → 帳戶 → 付款與訂閱 → 管理訂閱。</li>
+        <li>退款依 Google Play 相關政策辦理。本翻譯僅供參考，具法律約束力者為英文版本。</li>
+      </ul>
+    </section>
+
     <footer class="langswitch">
       언어 / Language · <a href="#ko">한국어</a> · <a href="#en">English</a>
     </footer>
@@ -556,25 +1153,98 @@
   <a href="#" class="top" title="맨 위로 / Back to top">↑ Top</a>
 
   <script>
-    function setActive(){
-      const hash=(location.hash||'').toLowerCase();
-      const ko=document.getElementById('panel-ko');
-      const en=document.getElementById('panel-en');
-      const tko=document.getElementById('tab-ko');
-      const ten=document.getElementById('tab-en');
-      const isKo=hash==='#ko'; const isEn=hash==='#en';
-      if(!isKo && !isEn){
-        const nav=(navigator.languages&&navigator.languages[0])||navigator.language||'en';
-        const pick=(/^ko(\-|$)/i.test(nav))?'#ko':'#en';
-        history.replaceState(null,'',pick); return setActive();
+    const SUPPORTED_LANG_KEYS = [
+      'ko','en','ar','cs','de','el','es','fr','hi','hu',
+      'id','it','ja','pl','pt','pt-br','ro','ru','th','tr',
+      'uk','vi','zh','zh-hans','zh-hant'
+    ];
+
+    const BROWSER_TO_LANG = {
+      'ko':'ko','ko-kr':'ko',
+      'en':'en','en-us':'en','en-gb':'en','en-au':'en','en-ca':'en',
+      'ar':'ar','ar-sa':'ar','ar-eg':'ar',
+      'cs':'cs','cs-cz':'cs',
+      'de':'de','de-de':'de','de-at':'de','de-ch':'de',
+      'el':'el','el-gr':'el',
+      'es':'es','es-es':'es','es-mx':'es','es-419':'es','es-ar':'es',
+      'fr':'fr','fr-fr':'fr','fr-ca':'fr','fr-be':'fr',
+      'hi':'hi','hi-in':'hi',
+      'hu':'hu','hu-hu':'hu',
+      'id':'id','id-id':'id',
+      'it':'it','it-it':'it',
+      'ja':'ja','ja-jp':'ja',
+      'pl':'pl','pl-pl':'pl',
+      'pt':'pt','pt-pt':'pt',
+      'pt-br':'pt-br',
+      'ro':'ro','ro-ro':'ro',
+      'ru':'ru','ru-ru':'ru',
+      'th':'th','th-th':'th',
+      'tr':'tr','tr-tr':'tr',
+      'uk':'uk','uk-ua':'uk',
+      'vi':'vi','vi-vn':'vi',
+      'zh':'zh',
+      'zh-cn':'zh-hans','zh-sg':'zh-hans',
+      'zh-tw':'zh-hant','zh-hk':'zh-hant','zh-mo':'zh-hant'
+    };
+
+    function detectLangKey() {
+      const langs = (navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || 'en']
+      );
+
+      // exact match first
+      for (const raw of langs) {
+        const code = (raw || '').toString().toLowerCase();
+        if (BROWSER_TO_LANG[code]) return BROWSER_TO_LANG[code];
       }
-      ko.classList.toggle('active',isKo);
-      en.classList.toggle('active',isEn);
-      tko.setAttribute('aria-current',isKo?'true':'false');
-      ten.setAttribute('aria-current',isEn?'true':'false');
-      document.documentElement.setAttribute('lang',isKo?'ko':'en');
+
+      // base language (e.g. "pt-BR" -> "pt")
+      for (const raw of langs) {
+        const base = (raw || '').toString().toLowerCase().split('-')[0];
+        if (BROWSER_TO_LANG[base]) return BROWSER_TO_LANG[base];
+      }
+
+      return 'en';
     }
-    window.addEventListener('hashchange',setActive,{passive:true});
+
+    function applyLang(langKey){
+      SUPPORTED_LANG_KEYS.forEach(key => {
+        const panel = document.getElementById('panel-' + key);
+        const tab = document.getElementById('tab-' + key);
+        const isActive = key === langKey;
+        if (panel) panel.classList.toggle('active', isActive);
+        if (tab) tab.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+
+      // html lang attribute (simplified)
+      let htmlLang = 'en';
+      if (langKey.startsWith('ko')) htmlLang = 'ko';
+      else if (langKey.startsWith('zh')) htmlLang = 'zh';
+      else htmlLang = langKey.split('-')[0] || 'en';
+      document.documentElement.setAttribute('lang', htmlLang);
+    }
+
+    function setActive(){
+      const rawHash = (location.hash || '').toLowerCase();
+      let langKey = '';
+
+      if (rawHash && rawHash.startsWith('#')) {
+        langKey = rawHash.substring(1);
+      }
+
+      if (!SUPPORTED_LANG_KEYS.includes(langKey)) {
+        langKey = detectLangKey();
+        if (!SUPPORTED_LANG_KEYS.includes(langKey)) {
+          langKey = 'en';
+        }
+        history.replaceState(null, '', '#' + langKey);
+      }
+
+      applyLang(langKey);
+    }
+
+    window.addEventListener('hashchange', setActive, { passive: true });
     setActive();
   </script>
 </body>
