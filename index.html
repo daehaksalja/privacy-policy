@@ -7,101 +7,767 @@
   <meta name="robots" content="noindex" />
   <meta name="color-scheme" content="light dark" />
   <style>
+    /* =========================
+       0. Design Tokens
+       ========================= */
     :root{
       /* Light */
-      --bg:#ffffff; --fg:#0a1020; --muted:#5b667a;
-      --link:#0b72ff; --link-hover:#0958c7;
-      --border:#d7dde5; --chip:#f6f8fa; --thead:#eef3f9;
-      --zebra:rgba(9,16,32,.035); --card:#ffffff;
-      --shadow:0 6px 20px rgba(30,43,66,.08);
-      --tab-bg:#f4f6fb; --tab-fg:#203054;
-      --tab-active:#0b72ff; --tab-active-bg:#e9f2ff;
-      --th-fg:#0a1020;
-      --focus:2px solid #6db3ff; --focus-shadow:0 0 0 4px rgba(109,179,255,.25);
+      --bg:#050814;
+      --bg-elevated:#070b18;
+      --bg-elevated-soft:rgba(12,18,34,.85);
+      --fg:#eef3ff;
+      --muted:#9eabc6;
+
+      --accent:#6da6ff;
+      --accent-soft:#263b7a;
+      --accent-strong:#9fd3ff;
+
+      --accent-pink:#ff7ad9;
+      --accent-cyan:#4fe3ff;
+
+      --link:#89b8ff;
+      --link-hover:#c2d9ff;
+
+      --border:rgba(140,170,230,.35);
+      --border-soft:rgba(140,170,230,.18);
+
+      --chip-bg:rgba(10,18,40,.9);
+      --chip-inner:rgba(46,63,109,.85);
+      --thead:#101b33;
+      --zebra:rgba(143,179,255,.05);
+      --card:#050814;
+      --shadow:0 18px 55px rgba(0,0,0,.75);
+
+      --tab-bg:rgba(7,13,32,.8);
+      --tab-fg:#d0ddff;
+      --tab-active:#ffffff;
+      --tab-active-bg:linear-gradient(120deg,#6da6ff,#8f7aff,#ff91d0);
+      --tab-outline:0 0 0 1px rgba(164,202,255,.7);
+
+      --th-fg:#dde7ff;
+
+      --focus:2px solid rgba(143,179,255,.9);
+      --focus-shadow:0 0 0 4px rgba(143,179,255,.35);
+
+      --radius-lg:22px;
+      --radius-md:16px;
+      --radius-pill:999px;
+
+      --blur-strong:28px;
+      --blur-soft:18px;
+
+      --transition-fast:.14s ease-out;
+      --transition-med:.22s ease-out;
     }
-    @media (prefers-color-scheme: dark){
+
+    @media (prefers-color-scheme: light){
       :root{
-        /* Dark */
-        --bg:#0b0f14; --fg:#e8eef8; --muted:#a7b2c2;
-        --link:#7ab0ff; --link-hover:#a4caff;
-        --border:#2b3441; --chip:#131922; --thead:#111821;
-        --zebra:rgba(255,255,255,.04); --card:#0e141c;
-        --shadow:0 8px 30px rgba(0,0,0,.35);
-        --tab-bg:#121a24; --tab-fg:#c7d6ea;
-        --tab-active:#9bcbff; --tab-active-bg:#0f1c2b;
-        --th-fg:#e8eef8;
+        /* Light theme override (조금 더 산뜻하게) */
+        --bg:#f5f7ff;
+        --bg-elevated:#f2f5ff;
+        --bg-elevated-soft:rgba(244,247,255,.94);
+        --fg:#111525;
+        --muted:#5a6785;
+
+        --accent:#3c76ff;
+        --accent-soft:#d8e3ff;
+        --accent-strong:#2057ff;
+
+        --accent-pink:#f25fb0;
+        --accent-cyan:#00bcd4;
+
+        --link:#2257dd;
+        --link-hover:#163ebb;
+
+        --border:rgba(82,112,190,.35);
+        --border-soft:rgba(118,141,209,.18);
+
+        --chip-bg:rgba(255,255,255,.9);
+        --chip-inner:rgba(233,239,255,.96);
+        --thead:#e5ecff;
+        --zebra:rgba(44,80,200,.03);
+        --card:#ffffff;
+        --shadow:0 16px 40px rgba(72,90,155,.2);
+
+        --tab-bg:rgba(241,244,255,.96);
+        --tab-fg:#1f2b4b;
+        --tab-active:#ffffff;
+        --tab-active-bg:linear-gradient(120deg,#3c76ff,#7b5cff,#ff7cb6);
+        --tab-outline:0 0 0 1px rgba(68,102,190,.25);
+
+        --th-fg:#121a33;
       }
     }
 
-    html,body{background:var(--bg);color:var(--fg)}
-    body{margin:0;line-height:1.65;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Apple SD Gothic Neo,Apple Color Emoji,Roboto,Noto Sans KR,Arial,sans-serif}
+    /* 기본 세팅 */
+    *{box-sizing:border-box}
+    html{
+      scroll-behavior:smooth;
+      scroll-padding-top:84px;
+    }
+    html,body{
+      background:radial-gradient(circle at 0% 0%, #23336a 0, transparent 55%),
+                 radial-gradient(circle at 100% 0%, #372b63 0, transparent 55%),
+                 radial-gradient(circle at 50% 100%, #102746 0, transparent 60%),
+                 var(--bg);
+      color:var(--fg);
+    }
+    body{
+      margin:0;
+      line-height:1.7;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Apple SD Gothic Neo, "Noto Sans KR", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
 
-    .hero{background:
-      radial-gradient(1200px 600px at 10% 0%, rgba(90,140,255,.25), transparent 60%),
-      radial-gradient(900px 500px at 90% -10%, rgba(142,211,255,.20), transparent 55%),
-      linear-gradient(180deg, rgba(90,140,255,.08), transparent 55%);
-      border-bottom:1px solid var(--border)}
-    .container{max-width:900px;margin:0 auto;padding:24px 16px}
-    .headline{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    h1{font-size:clamp(1.4rem,1.1rem + 1.5vw,2rem);line-height:1.28;margin:0}
-    .badge-en{font-size:.85rem;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--chip);color:var(--muted)}
-    .meta{margin-top:6px;color:var(--muted);font-size:.92rem}
+    /* =========================
+       1. Hero / Header
+       ========================= */
+    .hero{
+      position:relative;
+      border-bottom:1px solid rgba(160,190,255,.3);
+      overflow:hidden;
+      padding-bottom:10px;
+      background:
+        radial-gradient(850px 420px at 0% 0%, rgba(109,166,255,.36), transparent 70%),
+        radial-gradient(650px 360px at 100% 0%, rgba(255,145,208,.32), transparent 70%),
+        linear-gradient(160deg, rgba(16,27,68,.95), rgba(5,8,20,.98));
+      box-shadow:0 24px 80px rgba(0,0,0,.75);
+      isolation:isolate;
+    }
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto;
+      border-radius:999px;
+      filter:blur(60px);
+      opacity:.85;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+    .hero::before{
+      width:420px;height:420px;
+      bottom:-200px;left:-120px;
+      background:radial-gradient(circle at 30% 20%, rgba(122,217,255,.7), transparent 60%);
+    }
+    .hero::after{
+      width:520px;height:520px;
+      bottom:-260px;right:-140px;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,159,195,.8), transparent 55%),
+        radial-gradient(circle at 70% 80%, rgba(116,154,255,.8), transparent 60%);
+    }
 
-    .tabs-wrap{position:sticky;top:0;z-index:5;backdrop-filter:saturate(160%) blur(6px);
-      background:color-mix(in oklab, var(--bg) 92%, transparent);border-bottom:1px solid var(--border)}
-    .tabs{display:flex;gap:8px;padding:10px 0;flex-wrap:wrap}
-    .tabs a{padding:6px 10px;border-radius:10px;border:1px solid var(--border);
-      background:var(--tab-bg);color:var(--tab-fg);text-decoration:none;font-weight:600;
+    .container{
+      max-width:1040px;
+      margin:0 auto;
+      padding:22px 18px;
+      position:relative;
+      z-index:1;
+    }
+
+    .headline{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      gap:14px 18px;
+      justify-content:space-between;
+    }
+
+    .hero-main-title{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px 14px;
+    }
+
+    h1{
+      font-size:clamp(1.6rem,1.2rem + 1.6vw,2.15rem);
+      line-height:1.24;
+      margin:0;
+      letter-spacing:.01em;
+      text-shadow:0 0 25px rgba(0,0,0,.55);
+    }
+
+    .badge-en{
+      font-size:.85rem;
+      padding:5px 12px;
+      border-radius:var(--radius-pill);
+      border:1px solid rgba(199,219,255,.6);
+      background:radial-gradient(circle at 0 0, rgba(255,255,255,.4), transparent 60%),
+                 linear-gradient(135deg, rgba(10,16,40,.8), rgba(12,23,64,.95));
+      color:var(--accent-strong);
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      box-shadow:0 10px 30px rgba(0,0,0,.4);
+      backdrop-filter:blur(20px);
+    }
+    .badge-en::before{
+      content:"●";
+      font-size:.6rem;
+      color:var(--accent-cyan);
+      text-shadow:0 0 10px rgba(85,233,255,.9);
+    }
+
+    .badge-app{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:7px 14px;
+      border-radius:var(--radius-pill);
+      border:1px solid rgba(186,207,255,.7);
+      background:radial-gradient(circle at 0 0, rgba(252,255,254,.3), transparent 60%),
+                 linear-gradient(145deg, rgba(12,21,56,.96), rgba(21,29,66,.96));
+      box-shadow:0 14px 38px rgba(0,0,0,.7);
+      color:var(--muted);
+      font-size:.8rem;
+      white-space:nowrap;
+    }
+    .badge-app-icon{
+      width:24px;height:24px;
+      border-radius:30%;
+      background:
+        radial-gradient(circle at 20% 0%, #fff, transparent 55%),
+        conic-gradient(from 210deg,
+          #ffe483, #ff9e7c, #ff7cd2, #8ba6ff, #57f3ff, #ffe483);
+      padding:2px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .badge-app-icon-inner{
+      width:100%;height:100%;
+      border-radius:27%;
+      background:radial-gradient(circle at 30% 10%, #fff, #f6f8ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:.68rem;
+      color:#27325b;
+      letter-spacing:.03em;
+    }
+
+    .meta{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .meta small{opacity:.95}
+
+    .meta strong{
+      color:var(--accent-strong);
+      font-weight:600;
+    }
+
+    /* =========================
+       2. Sticky Tabs
+       ========================= */
+    .tabs-wrap{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:saturate(170%) blur(16px);
+      background:
+        linear-gradient(to bottom,
+          rgba(3,6,18,.9),
+          rgba(3,6,18,.85),
+          rgba(3,6,18,.8),
+          transparent 100%);
+      border-bottom:1px solid rgba(120,150,230,.5);
+      box-shadow:0 10px 30px rgba(0,0,0,.5);
+    }
+    .tabs-shell{
+      position:relative;
+    }
+    .tabs-shell::before,
+    .tabs-shell::after{
+      content:"";
+      position:absolute;
+      top:8px;bottom:8px;
+      width:36px;
+      pointer-events:none;
+      z-index:2;
+    }
+    .tabs-shell::before{
+      left:-4px;
+      background:linear-gradient(90deg, rgba(3,6,18,1), rgba(3,6,18,0));
+    }
+    .tabs-shell::after{
+      right:-4px;
+      background:linear-gradient(270deg, rgba(3,6,18,1), rgba(3,6,18,0));
+    }
+
+    .tabs{
+      position:relative;
+      display:flex;
+      flex-wrap:nowrap;
+      gap:8px;
+      padding:10px 0 12px;
+      overflow-x:auto;
+      scrollbar-width:thin;
+      scrollbar-color:rgba(145,177,255,.7) transparent;
+    }
+    .tabs::-webkit-scrollbar{
+      height:4px;
+    }
+    .tabs::-webkit-scrollbar-track{
+      background:transparent;
+    }
+    .tabs::-webkit-scrollbar-thumb{
+      background:linear-gradient(90deg,#6da6ff,#ff91d0);
+      border-radius:99px;
+    }
+
+    .tabs a{
+      position:relative;
+      padding:7px 11px;
+      border-radius:var(--radius-pill);
+      border:1px solid var(--border-soft);
+      background:var(--tab-bg);
+      color:var(--tab-fg);
+      text-decoration:none;
+      font-weight:600;
+      font-size:.8rem;
+      letter-spacing:.02em;
+      text-transform:none;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      transition:
+        background var(--transition-med),
+        border-color var(--transition-med),
+        color var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-med);
+      box-shadow:0 8px 26px rgba(0,0,0,.45);
+      backdrop-filter:blur(var(--blur-soft));
+      white-space:nowrap;
+    }
+    .tabs a::before{
+      content:"";
+      width:6px;height:6px;
+      border-radius:50%;
+      background:rgba(160,180,230,.6);
+      box-shadow:0 0 0 0 rgba(147,189,255,.75);
+      transform:scale(.85);
+      transition:all var(--transition-fast);
+    }
+    .tabs a[aria-current="true"]{
+      color:var(--tab-active);
+      background:var(--tab-active-bg);
+      border-color:transparent;
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,.7);
+    }
+    .tabs a[aria-current="true"]::before{
+      background:#ffffff;
+      box-shadow:0 0 12px rgba(255,255,255,.9);
+      transform:scale(1.1);
+    }
+
+    .tabs a:focus-visible{
+      outline:var(--focus);
+      box-shadow:var(--focus-shadow), 0 12px 32px rgba(0,0,0,.75);
+    }
+
+    /* =========================
+       3. Layout / Main
+       ========================= */
+    main.container{
+      margin-top:14px;
+      margin-bottom:40px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    /* TL;DR 카드를 좀 더 화려하게 */
+    .chipbox{
+      border-radius:var(--radius-lg);
+      padding:16px 18px 18px;
+      margin:4px 0 4px;
+      border:1px solid var(--border);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255,255,255,.12), transparent 55%),
+        radial-gradient(circle at 80% 120%, rgba(109,166,255,.2), transparent 55%),
+        linear-gradient(145deg, rgba(9,15,40,.9), rgba(8,12,34,.96));
+      box-shadow:0 18px 40px rgba(0,0,0,.75);
+      backdrop-filter:blur(var(--blur-strong));
+      position:relative;
+      overflow:hidden;
+    }
+    .chipbox::before{
+      content:"";
+      position:absolute;
+      inset:auto;
+      width:230px;height:230px;
+      right:-80px;bottom:-110px;
+      border-radius:50%;
+      background:
+        conic-gradient(from 200deg,
+          rgba(111,174,255,.95),
+          rgba(255,145,207,.95),
+          rgba(111,174,255,.95));
+      opacity:.16;
+      filter:blur(14px);
+      pointer-events:none;
+    }
+    .chipbox strong{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:8px;
+      font-size:.92rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--accent-strong);
+    }
+    .chipbox strong::before{
+      content:"◎";
+      font-size:.85rem;
+      color:var(--accent-cyan);
+      text-shadow:0 0 12px rgba(119,241,255,.9);
+    }
+    .chipbox ul{
+      margin:.3rem 0 .2rem 1.1rem;
+      padding:0;
+      color:#e7edff;
+      font-size:.9rem;
+    }
+    .chipbox li{
+      margin:.2rem 0;
+    }
+    .chipbox b{
+      color:var(--accent-strong);
+      font-weight:600;
+    }
+
+    /* Content cards (각 언어 섹션) */
+    .paper{
+      background:var(--bg-elevated-soft);
+      border-radius:var(--radius-lg);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      padding:22px 20px 26px;
+      margin:10px auto 22px;
+      position:relative;
+      overflow:hidden;
+      backdrop-filter:blur(var(--blur-strong));
+    }
+    .paper::before{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(111,174,255,.07), transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(255,145,207,.06), transparent 55%),
+        radial-gradient(circle at 50% 100%, rgba(92,139,255,.06), transparent 60%);
+      opacity:1;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+    .paper > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .paper h2{
+      font-size:clamp(1.02rem,.9rem + .55vw,1.18rem);
+      margin:1.9rem 0 .85rem;
+      line-height:1.3;
+      letter-spacing:.01em;
+      display:flex;
+      align-items:baseline;
+      gap:6px;
+    }
+    .paper h2:first-of-type{
+      margin-top:.6rem;
+    }
+    .paper h2::before{
+      content:"";
+      width:16px;height:16px;
+      border-radius:6px;
+      background:
+        radial-gradient(circle at 10% 0%, #fff, transparent 40%),
+        linear-gradient(135deg,#6da6ff,#ff91d0);
+      box-shadow:0 0 0 1px rgba(255,255,255,.25),
+                 0 0 16px rgba(126,184,255,.7);
+      flex-shrink:0;
+      transform:translateY(2px);
+    }
+
+    .paper h3{
+      font-size:.98rem;
+      margin:1.25rem 0 .4rem;
+      color:var(--accent-strong);
+    }
+
+    .paper p{
+      margin:.7rem 0;
+      font-size:.93rem;
+      color:var(--fg);
+    }
+
+    .paper small,
+    .paper time{
+      opacity:.9;
       font-size:.84rem;
-      transition:transform .08s ease, background .15s ease, border-color .15s ease}
-    .tabs a[aria-current="true"]{color:var(--tab-active);background:var(--tab-active-bg);border-color:var(--tab-active);transform:translateY(-1px)}
-    .tabs a:focus-visible{outline:var(--focus);box-shadow:var(--focus-shadow)}
+      color:var(--muted);
+    }
 
-    .paper{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:24px;margin:16px auto 32px}
-    .paper h2{font-size:clamp(1.05rem,.9rem + .6vw,1.25rem);margin:1.8rem 0 .8rem;line-height:1.3}
-    .paper p{margin:.75rem 0}
-    .paper small,.paper time{opacity:.85}
+    .paper ul{
+      padding-left:1.15rem;
+      margin:.4rem 0 .4rem;
+      font-size:.93rem;
+    }
+    .paper li{margin:.25rem 0;}
 
-    .chipbox{border:1px solid var(--border);background:var(--chip);border-radius:14px;padding:14px;margin:12px 0 18px}
-    .chipbox strong{display:block;margin-bottom:6px}
-    .chipbox ul{margin:.3rem 0 .2rem 1.1rem}
-
-    .table-wrap{position:relative;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.5rem 0 1.25rem;border-radius:12px;border:1px solid var(--border)}
-    table{border-collapse:separate;border-spacing:0;width:100%;min-width:760px}
+    /* 표 */
+    .table-wrap{
+      position:relative;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      margin:.55rem 0 1.35rem;
+      border-radius:var(--radius-md);
+      border:1px solid var(--border);
+      box-shadow:0 12px 32px rgba(0,0,0,.7);
+      background:radial-gradient(circle at 0 0, rgba(140,179,255,.18), transparent 55%),
+                 radial-gradient(circle at 100% 100%, rgba(255,145,208,.14), transparent 55%),
+                 rgba(4,9,25,.96);
+      backdrop-filter:blur(var(--blur-soft));
+    }
+    table{
+      border-collapse:separate;
+      border-spacing:0;
+      width:100%;
+      min-width:760px;
+      font-size:.9rem;
+    }
     colgroup col:nth-child(1){width:18ch}
     colgroup col:nth-child(2){width:28ch}
     colgroup col:nth-child(3){width:auto}
     colgroup col:nth-child(4){width:24ch}
-    th,td{border-top:1px solid var(--border);border-right:1px solid var(--border);padding:12px 13px;text-align:left;vertical-align:top}
-    tr>:first-child{border-left:1px solid var(--border)}
-    thead th{background:var(--thead);color:var(--th-fg);font-weight:700;position:sticky;top:0;z-index:1}
-    tbody tr:nth-child(odd){background:var(--zebra)}
-    tbody td, thead th{word-break:keep-all}
-    td{line-height:1.55}
+
+    th,td{
+      border-top:1px solid rgba(120,148,220,.45);
+      border-right:1px solid rgba(120,148,220,.4);
+      padding:11px 13px;
+      text-align:left;
+      vertical-align:top;
+    }
+    tr>:first-child{
+      border-left:1px solid rgba(120,148,220,.4);
+    }
+    thead th{
+      background:var(--thead);
+      color:var(--th-fg);
+      font-weight:700;
+      position:sticky;
+      top:0;
+      z-index:1;
+      backdrop-filter:blur(10px);
+    }
+    tbody tr:nth-child(odd){
+      background:var(--zebra);
+    }
+    tbody td,
+    thead th{
+      word-break:keep-all;
+    }
+    td{
+      line-height:1.55;
+    }
     @media (max-width:560px){
       colgroup{display:none}
-      table{min-width:620px}
+      table{min-width:640px}
     }
 
+    /* 언어 패널 */
     .lang{display:none}
     .lang.active{display:block}
 
-    a{color:var(--link)} a:hover{color:var(--link-hover)}
-    a:focus-visible{outline:var(--focus);box-shadow:var(--focus-shadow);border-radius:8px}
+    /* Links / Code */
+    a{color:var(--link)}
+    a:hover{color:var(--link-hover)}
+    a:focus-visible{
+      outline:var(--focus);
+      box-shadow:var(--focus-shadow);
+      border-radius:10px;
+    }
 
-    code,pre{background:var(--chip);padding:2px 6px;border-radius:6px}
-    pre{overflow:auto}
+    code,pre{
+      background:rgba(7,14,38,.9);
+      padding:2px 6px;
+      border-radius:6px;
+      font-size:.86rem;
+    }
+    pre{
+      overflow:auto;
+      border:1px solid rgba(110,140,210,.4);
+    }
 
-    footer{margin:28px 0 40px;color:var(--muted)}
-    .langswitch a{color:var(--muted);text-decoration:none}
-    .langswitch a:hover{color:var(--link)}
-    .top{position:fixed;right:16px;bottom:16px;z-index:10;border-radius:12px;border:1px solid var(--border);
-      background:var(--chip);color:var(--fg);padding:8px 10px;text-decoration:none;font-weight:600;box-shadow:var(--shadow)}
+    /* Footer */
+    footer{
+      margin:12px 0 40px;
+      color:var(--muted);
+      font-size:.86rem;
+      text-align:center;
+      padding-top:12px;
+      border-top:1px dashed rgba(130,158,225,.55);
+    }
+    .langswitch a{
+      color:var(--accent-strong);
+      text-decoration:none;
+      font-weight:500;
+    }
+    .langswitch a:hover{
+      color:var(--link-hover);
+    }
 
+    .top{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:25;
+      border-radius:var(--radius-pill);
+      border:1px solid rgba(161,189,255,.7);
+      background:
+        radial-gradient(circle at 0 0, rgba(255,255,255,.4), transparent 60%),
+        linear-gradient(145deg,#1a2650,#11172f);
+      color:#f3f7ff;
+      padding:7px 14px 8px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:.82rem;
+      box-shadow:0 14px 34px rgba(0,0,0,.8);
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      backdrop-filter:blur(18px);
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-med),
+        border-color var(--transition-med);
+    }
+    .top::before{
+      content:"⬆";
+      font-size:.8rem;
+    }
+    .top:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(0,0,0,.9);
+      border-color:rgba(197,216,255,.95);
+      background:
+        radial-gradient(circle at 0 0, rgba(255,255,255,.6), transparent 60%),
+        linear-gradient(145deg,#273772,#151b36);
+    }
+    .top:focus-visible{
+      outline:var(--focus);
+      box-shadow:var(--focus-shadow),0 18px 40px rgba(0,0,0,.9);
+    }
+
+    /* Heading anchor offset */
+    h2[id],
+    h3[id]{
+      scroll-margin-top:88px;
+    }
+
+    /* RTL (Arabic) 약간 정리 */
+    [dir="rtl"] .paper{
+      text-align:right;
+    }
+    [dir="rtl"] .paper ul{
+      padding-left:0;
+      padding-right:1.15rem;
+    }
+
+    /* Responsive */
+    @media (max-width:768px){
+      .container{
+        padding:18px 14px;
+      }
+      main.container{
+        gap:14px;
+      }
+      .paper{
+        padding:18px 14px 20px;
+        border-radius:18px;
+      }
+      .chipbox{
+        padding:14px 14px 16px;
+      }
+      .headline{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+      }
+      .badge-app{
+        align-self:flex-start;
+      }
+    }
+
+    @media (max-width:480px){
+      html{
+        scroll-padding-top:94px;
+      }
+      h1{
+        font-size:1.4rem;
+      }
+      .badge-en{
+        font-size:.8rem;
+      }
+      .chipbox ul{
+        font-size:.88rem;
+      }
+      .tabs a{
+        padding:6px 10px;
+        font-size:.78rem;
+      }
+    }
+
+    /* Motion-reduced */
+    @media (prefers-reduced-motion: reduce){
+      *{
+        scroll-behavior:auto !important;
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:0.01ms !important;
+      }
+    }
+
+    /* Print */
     @media print{
-      .tabs-wrap,.top,.langswitch,.chipbox{display:none!important}
-      .paper{border:none;box-shadow:none;padding:0}
-      thead th{position:static}
+      html,body{
+        background:#ffffff;
+      }
+      .hero,
+      .tabs-wrap,
+      .top,
+      .langswitch,
+      .chipbox{
+        display:none !important;
+      }
+      main.container{
+        margin-top:0;
+      }
+      .paper{
+        border:none;
+        box-shadow:none;
+        padding:0;
+        background:#ffffff;
+      }
+      thead th{
+        position:static;
+        backdrop-filter:none;
+      }
+      body{
+        color:#000000;
+      }
     }
   </style>
 </head>
@@ -109,7 +775,15 @@
   <header class="hero">
     <div class="container">
       <div class="headline">
-        <h1>Moong Counter 개인정보처리방침 <span class="badge-en">Privacy Policy</span></h1>
+        <div class="hero-main-title">
+          <h1>Moong Counter 개인정보처리방침 <span class="badge-en">Privacy Policy</span></h1>
+        </div>
+        <div class="badge-app" aria-label="앱 정보">
+          <div class="badge-app-icon">
+            <div class="badge-app-icon-inner">MC</div>
+          </div>
+          <span>Moong Counter · Premium Counter App</span>
+        </div>
       </div>
       <div class="meta">
         <small>
@@ -124,7 +798,7 @@
   </header>
 
   <div class="tabs-wrap">
-    <div class="container">
+    <div class="container tabs-shell">
       <nav class="tabs" role="tablist" aria-label="Language">
         <a id="tab-ko" href="#ko" role="tab" aria-controls="panel-ko">한국어</a>
         <a id="tab-en" href="#en" role="tab" aria-controls="panel-en">English</a>
@@ -157,21 +831,20 @@
 
   <main class="container">
     <aside class="chipbox" aria-label="요약 / TL;DR">
-  <strong>TL;DR / Summary</strong>
-  <ul>
-    <li><b>No sign-up or account / 회원가입·로그인 불필요</b></li>
-    <li><b>No ads or tracking SDKs / 광고·추적 SDK 없음</b></li>
-    <li><b>Only billing & subscription verification (Google Play & RevenueCat) / 결제·구독 검증만 처리</b></li>
-    <li><b>Support via in-app Anonymous ID / 문의 시 앱 내 익명 ID(익명 구독 식별자) 사용</b></li>
-    <li><b>Cancellation & refunds are handled in Google Play / 해지·환불은 Google Play에서 처리</b>
-      (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">
-        Manage subscriptions
-      </a>)
-    </li>
-    <li><b>30-day free trial, auto-renewal if not cancelled / 30일 무료체험, 미해지 시 자동갱신</b></li>
-  </ul>
-</aside>
-
+      <strong>TL;DR / Summary</strong>
+      <ul>
+        <li><b>No sign-up or account / 회원가입·로그인 불필요</b></li>
+        <li><b>No ads or tracking SDKs / 광고·추적 SDK 없음</b></li>
+        <li><b>Only billing & subscription verification (Google Play & RevenueCat) / 결제·구독 검증만 처리</b></li>
+        <li><b>Support via in-app Anonymous ID / 문의 시 앱 내 익명 ID(익명 구독 식별자) 사용</b></li>
+        <li><b>Cancellation & refunds are handled in Google Play / 해지·환불은 Google Play에서 처리</b>
+          (<a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">
+            Manage subscriptions
+          </a>)
+        </li>
+        <li><b>30-day free trial, auto-renewal if not cancelled / 30일 무료체험, 미해지 시 자동갱신</b></li>
+      </ul>
+    </aside>
 
     <!-- =================== 한국어 =================== -->
     <section id="panel-ko" class="paper lang" lang="ko" aria-label="개인정보처리방침(한국어)">
@@ -1155,7 +1828,7 @@
     </footer>
   </main>
 
-  <a href="#" class="top" title="맨 위로 / Back to top">↑ Top</a>
+  <a href="#" class="top" title="맨 위로 / Back to top">Top</a>
 
   <script>
     const SUPPORTED_LANG_KEYS = [
